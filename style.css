@@ -28,7 +28,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ШАПКА QIP 2005 */
 header {
     background: linear-gradient(to bottom, #1a4b8c, #0d2f5e);
     padding: 8px 0 6px 0;
@@ -54,19 +53,11 @@ header {
     color: #ffcc00;
 }
 
-.logo small {
-    font-size: 11px;
-    font-weight: normal;
-    color: #9bb7e0;
-    margin-left: 6px;
-}
-
 nav a {
     margin-left: 18px;
     color: #c0d8f0;
     font-size: 12px;
     font-weight: bold;
-    transition: 0.2s;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -82,7 +73,6 @@ nav a.active {
     padding-bottom: 2px;
 }
 
-/* ГЛАВНЫЙ ЭКРАН */
 .hero {
     text-align: center;
     padding: 40px 20px 35px;
@@ -119,7 +109,6 @@ nav a.active {
     color: #2a2a2a;
 }
 
-/* КНОПКИ */
 .btn {
     display: inline-block;
     background: linear-gradient(to bottom, #f5f9ff, #c0d8f0);
@@ -151,7 +140,6 @@ nav a.active {
     border-color: #0d2f5e;
 }
 
-/* СЕКЦИИ */
 .about, .download-section {
     padding: 35px 20px 30px;
     border-top: 1px solid #b3c3d4;
@@ -171,7 +159,6 @@ nav a.active {
     max-width: 700px;
 }
 
-/* ФИЧИ */
 .features {
     display: flex;
     flex-wrap: wrap;
@@ -209,7 +196,6 @@ nav a.active {
     margin-top: 10px;
 }
 
-/* СТРАНИЦЫ */
 .download-page, .about-page, .guide-page, .news-page {
     padding: 35px 20px 30px;
     background: #f0f5fa;
@@ -231,7 +217,6 @@ nav a.active {
     margin-bottom: 22px;
 }
 
-/* КАРТОЧКИ */
 .platform-card {
     background: #f5f8fc;
     padding: 18px 22px;
@@ -267,7 +252,47 @@ nav a.active {
     background: #fffcf0;
 }
 
-/* ПОДВАЛ */
+.guide-page ol {
+    padding-left: 22px;
+    margin: 16px 0;
+}
+
+.guide-page li {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.guide-page code {
+    background: #c8d4e0;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #0d2f5e;
+    font-weight: bold;
+}
+
+.news-item {
+    background: #f5f8fc;
+    padding: 16px 20px;
+    border: 1px solid #b3c3d4;
+    margin-bottom: 14px;
+}
+
+.news-item h2 {
+    font-size: 16px;
+    color: #0d2f5e;
+    margin-bottom: 4px;
+}
+
+.news-item p {
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.news-item .badge {
+    background: #c8d4e0;
+}
+
 footer {
     background: linear-gradient(to bottom, #d0dce8, #b8c8d8);
     padding: 18px 20px;
@@ -298,7 +323,6 @@ footer p {
     text-decoration: underline;
 }
 
-/* АДАПТАЦИЯ */
 @media (max-width: 640px) {
     .hero h1 {
         font-size: 32px;
@@ -330,9 +354,5 @@ footer p {
     .hero-buttons {
         flex-direction: column;
         align-items: center;
-    }
-    .logo small {
-        display: block;
-        margin-left: 0;
     }
 }
