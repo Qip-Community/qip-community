@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Гостевая книга</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+
+    <header>
+        <div class="container header-flex">
+            <div class="logo">📡 QIP <span>Community</span></div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="download.html">Скачать</a>
+                <a href="about.html">О нас</a>
+                <a href="team.html">Команда</a>
+                <a href="guide.html">Инструкция</a>
+                <a href="news.html">Новости</a>
+                <a href="reviews.html" class="active">Гостевая</a>
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="reviews-page">
+        <div class="container">
+            <h1>📖 Гостевая книга</h1>
+            <p class="subtitle">Оставь свой след в истории QIP Community</p>
+
+            <div class="review-form">
+                <h2>✏️ Написать сообщение</h2>
+                <form id="reviewForm">
+                    <input type="text" id="reviewName" placeholder="Ваше имя или ник" required />
+                    <textarea id="reviewText" rows="4" placeholder="Ваше сообщение..." required></textarea>
+                    <button type="submit" class="btn">Отправить</button>
+                </form>
+            </div>
+
+            <div id="reviewsList">
+                <p class="placeholder">Загружаем сообщения...</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>QIP Community © 2026 — неофициальный фанатский проект.</p>
+            <div class="socials">
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
+                <a href="#">YouTube</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const API_URL = "https://script.google.com/macros/s/AKfycbyXu_a7f3glcHChsXhxP83PN4w1qhC7YMPdwGjwGIs8TUyc-dnvcngob6gab1RrYDOLvg/exec";
+
+        async function loadMessages() {
+            const container = document.getElementById("reviewsList");
+            try {
+                const res = await fetch(`${API_URL}?action=get`);
+                const data = await res.json();
+
+                if (data.success && data.data && data.data.length > 0) {
+                    container.innerHTML = data.data.map(msg => `
+                        <div class="review-item">
+                            <div class="review-header">
+                                <strong>${escapeHtml(msg[1] || "Аноним")}</strong>
+                                <span class="review-date">${escapeHtml(msg[0] || "")}</span>
+                            </div>
+                            <p>${escapeHtml(msg[2] || "")}</p>
+                        </div>
+                    `).join("");
+                } else {
+                    container.innerHTML = '<p class="placeholder">Пока нет сообщений. Будьте первым! 😊</p>';
+                }
+            } catch (e) {
+                container.innerHTML = '<p class="placeholder">❌ Не удалось загрузить сообщения. Проверьте интернет.</p>';
+                console.error("Ошибка загрузки:", e);
+            }
+        }
+
+        document.getElementById("reviewForm").addEventListener("submit", async function(e) {
+            e.preventDefault();
+            const name = document.getElementById("reviewName").value.trim();
+            const text = document.getElementById("reviewText").value.trim();
+
+            if (!name || !text) {
+                alert("Заполните все поля!");
+                return;
+            }
+
+            const btn = this.querySelector(".btn");
+            btn.textContent = "Отправка...";
+            btn.disabled = true;
+
+            try {
+                const url = `${API_URL}?action=add&name=${encodeURIComponent(name)}&message=${encodeURIComponent(text)}`;
+                const res = await fetch(url);
+                const data = await res.json();
+
+                if (data.success) {
+                    document.getElementById("reviewName").value = "";
+                    document.getElementById("reviewText").value = "";
+                    loadMessages();
+                    alert("✅ Спасибо! Сообщение добавлено.");
+                } else {
+                    alert("❌ Ошибка: " + (data.error || "попробуйте позже"));
+                }
+            } catch (e) {
+                alert("❌ Ошибка отправки. Проверьте интернет.");
+            } finally {
+                btn.textContent = "Отправить";
+                btn.disabled = false;
+            }
+        });
+
+        function escapeHtml(text) {
+            const div = document.createElement("div");
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        document.addEventListener("DOMContentLoaded", loadMessages);
+    </script>
+
+</body>
+</html>
