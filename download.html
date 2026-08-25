@@ -13,56 +13,120 @@
         <div class="container header-flex">
             <div class="logo">📡 QIP <span>Community</span></div>
             <nav>
-                <a href="index.html">Главная</a>
-                <a href="download.html" class="active">Скачать</a>
-                <a href="about.html">О нас</a>
-                <a href="team.html">Команда</a>
-                <a href="guide.html">Инструкция</a>
-                <a href="news.html">Новости</a>
-                <a href="reviews.html">Гостевая</a>
-                <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
+                <a href="index.html" data-i18n="nav-home">Главная</a>
+                <a href="download.html" class="active" data-i18n="nav-download">Скачать</a>
+                <a href="about.html" data-i18n="nav-about">О нас</a>
+                <a href="team.html" data-i18n="nav-team">Команда</a>
+                <a href="guide.html" data-i18n="nav-guide">Инструкция</a>
+                <a href="news.html" data-i18n="nav-news">Новости</a>
+                <a href="reviews.html" data-i18n="nav-guestbook">Гостевая</a>
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank" data-i18n="nav-discord">Discord</a>
+                <button id="lang-toggle" style="background: none; border: 2px solid #ffcc00; color: #fff; padding: 2px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 12px; margin-left: 15px;">RU / EN</button>
             </nav>
         </div>
     </header>
 
     <section class="download-page">
         <div class="container">
-            <h1>📥 Скачать QIP</h1>
-            <p class="subtitle">Выбери свою платформу и начни общение</p>
+            <h1 data-i18n="download-title">📥 Скачать QIP</h1>
+            <p class="subtitle" data-i18n="download-subtitle">Выбери свою платформу и начни общение</p>
 
             <div class="platform-card">
-                <h2>🪟 Windows</h2>
-                <p>QIP 2005 Repack для Windows 10/11. Репак уже включает все настройки, осталось только установить.</p>
-                <a href="https://drive.google.com/drive/folders/1Fa3FoDCoU0AV_41joxUZE582zhyx6oXX?usp=sharing" target="_blank" class="btn">Скачать для Windows →</a>
+                <h2 data-i18n="windows-title">🪟 Windows</h2>
+                <p data-i18n="windows-desc">QIP 2005 Repack для Windows 10/11. Репак уже включает все настройки, осталось только установить.</p>
+                <a href="https://drive.google.com/drive/folders/1Fa3FoDCoU0AV_41joxUZE582zhyx6oXX?usp=sharing" target="_blank" class="btn" data-i18n="windows-btn">Скачать для Windows →</a>
             </div>
 
             <div class="platform-card">
-                <h2>📱 Android</h2>
-                <p>QIP 2005 для Android. Установи APK и войди в аккаунт.</p>
-                <span class="badge">В разработке</span>
+                <h2 data-i18n="android-title">📱 Android</h2>
+                <p data-i18n="android-desc">QIP 2005 для Android. Установи APK и войди в аккаунт.</p>
+                <span class="badge" data-i18n="android-badge">В разработке</span>
             </div>
 
             <div class="platform-card help-card">
-                <h2>❓ Нужна помощь?</h2>
-                <p>Не получается скачать или настроить? Обращайся в Discord — поможем!</p>
-                <a href="https://discord.gg/VSJpGajNmP" target="_blank" class="btn">Перейти в Discord →</a>
+                <h2 data-i18n="help-title">❓ Нужна помощь?</h2>
+                <p data-i18n="help-desc">Не получается скачать или настроить? Обращайся в Discord — поможем!</p>
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank" class="btn" data-i18n="help-btn">Перейти в Discord →</a>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>QIP Community © 2026 — неофициальный фанатский проект.</p>
+            <p data-i18n="footer-text">QIP Community © 2026 — неофициальный фанатский проект.</p>
             <div class="socials">
                 <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
                 <a href="#">YouTube</a>
                 <a href="#">TikTok</a>
             </div>
-            <!-- Cloudflare Web Analytics -->
             <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "310462293df347eaaf0c101f050bdbcf"}'></script>
-            <!-- End Cloudflare Web Analytics -->
         </div>
     </footer>
+
+    <script>
+        (function() {
+            const translations = {
+                ru: {
+                    'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-discord': 'Discord',
+                    'footer-text': 'QIP Community © 2026 — неофициальный фанатский проект.',
+                    'download-title': '📥 Скачать QIP',
+                    'download-subtitle': 'Выбери свою платформу и начни общение',
+                    'windows-title': '🪟 Windows',
+                    'windows-desc': 'QIP 2005 Repack для Windows 10/11. Репак уже включает все настройки, осталось только установить.',
+                    'windows-btn': 'Скачать для Windows →',
+                    'android-title': '📱 Android',
+                    'android-desc': 'QIP 2005 для Android. Установи APK и войди в аккаунт.',
+                    'android-badge': 'В разработке',
+                    'help-title': '❓ Нужна помощь?',
+                    'help-desc': 'Не получается скачать или настроить? Обращайся в Discord — поможем!',
+                    'help-btn': 'Перейти в Discord →'
+                },
+                en: {
+                    'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-discord': 'Discord',
+                    'footer-text': 'QIP Community © 2026 — unofficial fan project.',
+                    'download-title': '📥 Download QIP',
+                    'download-subtitle': 'Choose your platform and start chatting',
+                    'windows-title': '🪟 Windows',
+                    'windows-desc': 'QIP 2005 Repack for Windows 10/11. The repack already includes all settings, just install it.',
+                    'windows-btn': 'Download for Windows →',
+                    'android-title': '📱 Android',
+                    'android-desc': 'QIP 2005 for Android. Install the APK and log in to your account.',
+                    'android-badge': 'In development',
+                    'help-title': '❓ Need help?',
+                    'help-desc': 'Can\'t download or configure? Contact us on Discord — we\'ll help!',
+                    'help-btn': 'Go to Discord →'
+                }
+            };
+
+            let currentLang = localStorage.getItem('qip-lang') || 'ru';
+
+            function setLanguage(lang) {
+                currentLang = lang;
+                localStorage.setItem('qip-lang', lang);
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (translations[lang] && translations[lang][key]) {
+                        el.textContent = translations[lang][key];
+                    }
+                });
+                document.documentElement.lang = lang;
+            }
+
+            function toggleLang() {
+                const nextLang = currentLang === 'ru' ? 'en' : 'ru';
+                setLanguage(nextLang);
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                setLanguage(currentLang);
+                const btn = document.getElementById('lang-toggle');
+                if (btn) {
+                    btn.addEventListener('click', toggleLang);
+                }
+            });
+
+        })();
+    </script>
 
 </body>
 </html>

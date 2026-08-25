@@ -13,49 +13,48 @@
         <div class="container header-flex">
             <div class="logo">📡 QIP <span>Community</span></div>
             <nav>
-                <a href="index.html">Главная</a>
-                <a href="download.html">Скачать</a>
-                <a href="about.html">О нас</a>
-                <a href="team.html">Команда</a>
-                <a href="guide.html">Инструкция</a>
-                <a href="news.html">Новости</a>
-                <a href="reviews.html" class="active">Гостевая</a>
-                <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
+                <a href="index.html" data-i18n="nav-home">Главная</a>
+                <a href="download.html" data-i18n="nav-download">Скачать</a>
+                <a href="about.html" data-i18n="nav-about">О нас</a>
+                <a href="team.html" data-i18n="nav-team">Команда</a>
+                <a href="guide.html" data-i18n="nav-guide">Инструкция</a>
+                <a href="news.html" data-i18n="nav-news">Новости</a>
+                <a href="reviews.html" class="active" data-i18n="nav-guestbook">Гостевая</a>
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank" data-i18n="nav-discord">Discord</a>
+                <button id="lang-toggle" style="background: none; border: 2px solid #ffcc00; color: #fff; padding: 2px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 12px; margin-left: 15px;">RU / EN</button>
             </nav>
         </div>
     </header>
 
     <section class="reviews-page">
         <div class="container">
-            <h1>📖 Гостевая книга</h1>
-            <p class="subtitle">Оставь свой след в истории QIP Community</p>
+            <h1 data-i18n="guestbook-title">📖 Гостевая книга</h1>
+            <p class="subtitle" data-i18n="guestbook-subtitle">Оставь свой след в истории QIP Community</p>
 
             <div class="review-form">
-                <h2>✏️ Написать сообщение</h2>
+                <h2 data-i18n="guestbook-form-title">✏️ Написать сообщение</h2>
                 <form id="reviewForm">
                     <input type="text" id="reviewName" placeholder="Ваше имя или ник" required />
                     <textarea id="reviewText" rows="4" placeholder="Ваше сообщение..." required></textarea>
-                    <button type="submit" class="btn">Отправить</button>
+                    <button type="submit" class="btn" data-i18n="guestbook-form-btn">Отправить</button>
                 </form>
             </div>
 
             <div id="reviewsList">
-                <p class="placeholder">Загружаем сообщения...</p>
+                <p class="placeholder" data-i18n="guestbook-loading">Загружаем сообщения...</p>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>QIP Community © 2026 — неофициальный фанатский проект.</p>
+            <p data-i18n="footer-text">QIP Community © 2026 — неофициальный фанатский проект.</p>
             <div class="socials">
                 <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
                 <a href="#">YouTube</a>
                 <a href="#">TikTok</a>
             </div>
-            <!-- Cloudflare Web Analytics -->
             <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "310462293df347eaaf0c101f050bdbcf"}'></script>
-            <!-- End Cloudflare Web Analytics -->
         </div>
     </footer>
 
@@ -129,6 +128,60 @@
         }
 
         document.addEventListener("DOMContentLoaded", loadMessages);
+
+        // ============================
+        // ПЕРЕВОД
+        // ============================
+        (function() {
+            const translations = {
+                ru: {
+                    'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-discord': 'Discord',
+                    'footer-text': 'QIP Community © 2026 — неофициальный фанатский проект.',
+                    'guestbook-title': '📖 Гостевая книга',
+                    'guestbook-subtitle': 'Оставь свой след в истории QIP Community',
+                    'guestbook-form-title': '✏️ Написать сообщение',
+                    'guestbook-form-btn': 'Отправить',
+                    'guestbook-loading': 'Загружаем сообщения...'
+                },
+                en: {
+                    'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-discord': 'Discord',
+                    'footer-text': 'QIP Community © 2026 — unofficial fan project.',
+                    'guestbook-title': '📖 Guestbook',
+                    'guestbook-subtitle': 'Leave your mark in the history of QIP Community',
+                    'guestbook-form-title': '✏️ Write a message',
+                    'guestbook-form-btn': 'Send',
+                    'guestbook-loading': 'Loading messages...'
+                }
+            };
+
+            let currentLang = localStorage.getItem('qip-lang') || 'ru';
+
+            function setLanguage(lang) {
+                currentLang = lang;
+                localStorage.setItem('qip-lang', lang);
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (translations[lang] && translations[lang][key]) {
+                        el.textContent = translations[lang][key];
+                    }
+                });
+                document.documentElement.lang = lang;
+            }
+
+            function toggleLang() {
+                const nextLang = currentLang === 'ru' ? 'en' : 'ru';
+                setLanguage(nextLang);
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                setLanguage(currentLang);
+                const btn = document.getElementById('lang-toggle');
+                if (btn) {
+                    btn.addEventListener('click', toggleLang);
+                }
+            });
+
+        })();
     </script>
 
 </body>
