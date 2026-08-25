@@ -1,0 +1,209 @@
+/* ОБЩИЕ СТИЛИ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0d0f14;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #8ab4f8;
+}
+
+a:hover {
+    color: #fff;
+}
+
+/* ШАПКА */
+header {
+    background: #161a20;
+    padding: 20px 0;
+    border-bottom: 1px solid #2a2f38;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #8ab4f8;
+}
+
+nav a {
+    margin-left: 25px;
+    font-weight: 500;
+    color: #aaa;
+}
+
+nav a.active {
+    color: #8ab4f8;
+    border-bottom: 2px solid #8ab4f8;
+}
+
+/* ГЛАВНЫЙ ЭКРАН */
+.hero {
+    text-align: center;
+    padding: 80px 20px 60px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    color: #8ab4f8;
+}
+
+.hero .subtitle {
+    font-size: 28px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 10px auto 30px;
+    color: #aaa;
+}
+
+/* КНОПКИ */
+.btn {
+    display: inline-block;
+    background: #8ab4f8;
+    color: #0d0f14;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #6d9ee0;
+    transform: scale(1.03);
+}
+
+/* СЕКЦИИ */
+.about,
+.download-section {
+    padding: 60px 20px;
+    border-top: 1px solid #2a2f38;
+}
+
+.about h2,
+.download-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #8ab4f8;
+}
+
+.download-section .btn {
+    margin-top: 15px;
+}
+
+/* СТРАНИЦА СКАЧИВАНИЯ */
+.download-page {
+    padding: 60px 20px;
+}
+
+.download-page h1 {
+    font-size: 40px;
+    color: #8ab4f8;
+}
+
+.download-page .subtitle {
+    font-size: 20px;
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+.platform-card {
+    background: #161a20;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid #2a2f38;
+}
+
+.platform-card h2 {
+    font-size: 24px;
+    color: #8ab4f8;
+    margin-bottom: 8px;
+}
+
+.platform-card p {
+    margin-bottom: 15px;
+    color: #bbb;
+}
+
+.badge {
+    display: inline-block;
+    background: #2a2f38;
+    color: #888;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.help-card {
+    border-color: #8ab4f8;
+}
+
+/* ПОДВАЛ */
+footer {
+    background: #161a20;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid #2a2f38;
+}
+
+footer p {
+    color: #777;
+    font-size: 14px;
+}
+
+.socials {
+    margin-top: 10px;
+}
+
+.socials a {
+    margin: 0 10px;
+    color: #777;
+    font-size: 14px;
+}
+
+.socials a:hover {
+    color: #8ab4f8;
+}
+
+/* АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 40px;
+    }
+    .hero .subtitle {
+        font-size: 20px;
+    }
+    .header-flex {
+        flex-direction: column;
+        gap: 12px;
+    }
+    nav a {
+        margin: 0 12px;
+    }
+}
