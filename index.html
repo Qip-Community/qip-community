@@ -78,29 +78,9 @@
                 <a href="#">YouTube</a>
                 <a href="#">TikTok</a>
             </div>
-            <!-- СЧЁТЧИК УНИКАЛЬНЫХ ПОСЕТИТЕЛЕЙ -->
-            <div style="text-align: center; margin-top: 15px; font-family: Tahoma, sans-serif; font-size: 14px; color: #0d2f5e;">
-                👥 Уникальных посетителей: <span id="unique-visitor-count">Загрузка...</span>
-            </div>
-
-            <script>
-                (function() {
-                    // Проверяем, был ли уже посетитель
-                    const hasVisited = localStorage.getItem('qip_visitor');
-
-                    let count = parseInt(localStorage.getItem('qip_visitor_count') || '0', 10);
-
-                    if (!hasVisited) {
-                        // Новый посетитель
-                        count++;
-                        localStorage.setItem('qip_visitor', 'true');
-                        localStorage.setItem('qip_visitor_count', String(count));
-                    }
-
-                    // Показываем число
-                    document.getElementById('unique-visitor-count').textContent = count;
-                })();
-            </script>
+            <!-- GoatCounter -->
+            <script data-goatcounter="https://dasdas.goatcounter.com/count"
+                    async src="./gc.zgo.at/count.js"></script>
             <!-- Cloudflare Web Analytics -->
             <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "310462293df347eaaf0c101f050bdbcf"}'></script>
             <!-- End Cloudflare Web Analytics -->
