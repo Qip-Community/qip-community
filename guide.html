@@ -13,59 +13,104 @@
         <div class="container header-flex">
             <div class="logo">📡 QIP <span>Community</span></div>
             <nav>
-                <a href="index.html">Главная</a>
-                <a href="download.html">Скачать</a>
-                <a href="about.html">О нас</a>
-                <a href="team.html">Команда</a>
-                <a href="guide.html" class="active">Инструкция</a>
-                <a href="news.html">Новости</a>
-                <a href="reviews.html">Гостевая</a>
-                <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
+                <a href="index.html" data-i18n="nav-home">Главная</a>
+                <a href="download.html" data-i18n="nav-download">Скачать</a>
+                <a href="about.html" data-i18n="nav-about">О нас</a>
+                <a href="team.html" data-i18n="nav-team">Команда</a>
+                <a href="guide.html" class="active" data-i18n="nav-guide">Инструкция</a>
+                <a href="news.html" data-i18n="nav-news">Новости</a>
+                <a href="reviews.html" data-i18n="nav-guestbook">Гостевая</a>
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank" data-i18n="nav-discord">Discord</a>
+                <button id="lang-toggle" style="background: none; border: 2px solid #ffcc00; color: #fff; padding: 2px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 12px; margin-left: 15px;">RU / EN</button>
             </nav>
         </div>
     </header>
 
     <section class="guide-page">
         <div class="container">
-            <h1>📖 Инструкция по установке</h1>
+            <h1 data-i18n="guide-title">📖 Инструкция по установке</h1>
             <ol>
-                <li><strong>Зарегистрируйся на Escargot</strong> — перейди по ссылке <a href="https://account.escargot.chat/register/" target="_blank">https://account.escargot.chat/register/</a>, выбери UIN и запомни его.</li>
-                <li><strong>Скачай QIP</strong> — перейди в раздел «Скачать» и загрузи репак для Windows.</li>
-                <li><strong>Установи программу</strong> — запусти установщик и следуй инструкциям.</li>
-                <li><strong>Настрой сервер</strong> — в QIP открой «Сервер/Прокси» и введи <code>login.oscar.nina.chat</code>.</li>
-                <li><strong>Войди в аккаунт</strong> — используй UIN и пароль, созданные на Escargot.</li>
-                <li><strong>Готово!</strong> Ты снова в QIP.</li>
+                <li data-i18n="guide-step1"><strong>Зарегистрируйся на Escargot</strong> — перейди по ссылке <a href="https://account.escargot.chat/register/" target="_blank">https://account.escargot.chat/register/</a>, выбери UIN и запомни его.</li>
+                <li data-i18n="guide-step2"><strong>Скачай QIP</strong> — перейди в раздел «Скачать» и загрузи репак для Windows.</li>
+                <li data-i18n="guide-step3"><strong>Установи программу</strong> — запусти установщик и следуй инструкциям.</li>
+                <li data-i18n="guide-step4"><strong>Настрой сервер</strong> — в QIP открой «Сервер/Прокси» и введи <code>login.oscar.nina.chat</code>.</li>
+                <li data-i18n="guide-step5"><strong>Войди в аккаунт</strong> — используй UIN и пароль, созданные на Escargot.</li>
+                <li data-i18n="guide-step6"><strong>Готово!</strong> Ты снова в QIP.</li>
             </ol>
-            <p>Если что-то пошло не так — пиши в <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>, поможем.</p>
+            <p data-i18n="guide-help">Если что-то пошло не так — пиши в <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>, поможем.</p>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>QIP Community © 2026 — неофициальный фанатский проект.</p>
+            <p data-i18n="footer-text">QIP Community © 2026 — неофициальный фанатский проект.</p>
             <div class="socials">
                 <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
                 <a href="#">YouTube</a>
                 <a href="#">TikTok</a>
             </div>
-            <div style="text-align: center; margin-top: 15px; font-family: Tahoma, sans-serif; font-size: 14px; color: #0d2f5e;">
-                👥 Уникальных посетителей: <span id="unique-visitor-count">Загрузка...</span>
-            </div>
-            <script>
-                (function() {
-                    const hasVisited = localStorage.getItem('qip_visitor');
-                    let count = parseInt(localStorage.getItem('qip_visitor_count') || '0', 10);
-                    if (!hasVisited) {
-                        count++;
-                        localStorage.setItem('qip_visitor', 'true');
-                        localStorage.setItem('qip_visitor_count', String(count));
-                    }
-                    document.getElementById('unique-visitor-count').textContent = count;
-                })();
-            </script>
             <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "310462293df347eaaf0c101f050bdbcf"}'></script>
         </div>
     </footer>
+
+    <script>
+        (function() {
+            const translations = {
+                ru: {
+                    'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-discord': 'Discord',
+                    'footer-text': 'QIP Community © 2026 — неофициальный фанатский проект.',
+                    'guide-title': '📖 Инструкция по установке',
+                    'guide-step1': '<strong>Зарегистрируйся на Escargot</strong> — перейди по ссылке <a href="https://account.escargot.chat/register/" target="_blank">https://account.escargot.chat/register/</a>, выбери UIN и запомни его.',
+                    'guide-step2': '<strong>Скачай QIP</strong> — перейди в раздел «Скачать» и загрузи репак для Windows.',
+                    'guide-step3': '<strong>Установи программу</strong> — запусти установщик и следуй инструкциям.',
+                    'guide-step4': '<strong>Настрой сервер</strong> — в QIP открой «Сервер/Прокси» и введи <code>login.oscar.nina.chat</code>.',
+                    'guide-step5': '<strong>Войди в аккаунт</strong> — используй UIN и пароль, созданные на Escargot.',
+                    'guide-step6': '<strong>Готово!</strong> Ты снова в QIP.',
+                    'guide-help': 'Если что-то пошло не так — пиши в <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>, поможем.'
+                },
+                en: {
+                    'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-discord': 'Discord',
+                    'footer-text': 'QIP Community © 2026 — unofficial fan project.',
+                    'guide-title': '📖 Installation Guide',
+                    'guide-step1': '<strong>Register on Escargot</strong> — go to <a href="https://account.escargot.chat/register/" target="_blank">https://account.escargot.chat/register/</a>, choose a UIN and remember it.',
+                    'guide-step2': '<strong>Download QIP</strong> — go to the "Download" section and get the Windows repack.',
+                    'guide-step3': '<strong>Install the program</strong> — run the installer and follow the instructions.',
+                    'guide-step4': '<strong>Configure the server</strong> — in QIP, open "Server/Proxy" and enter <code>login.oscar.nina.chat</code>.',
+                    'guide-step5': '<strong>Log in</strong> — use the UIN and password you created on Escargot.',
+                    'guide-step6': '<strong>Done!</strong> You\'re back in QIP.',
+                    'guide-help': 'If something went wrong — write in <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>, we\'ll help.'
+                }
+            };
+
+            let currentLang = localStorage.getItem('qip-lang') || 'ru';
+
+            function setLanguage(lang) {
+                currentLang = lang;
+                localStorage.setItem('qip-lang', lang);
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (translations[lang] && translations[lang][key]) {
+                        el.innerHTML = translations[lang][key];
+                    }
+                });
+                document.documentElement.lang = lang;
+            }
+
+            function toggleLang() {
+                const nextLang = currentLang === 'ru' ? 'en' : 'ru';
+                setLanguage(nextLang);
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                setLanguage(currentLang);
+                const btn = document.getElementById('lang-toggle');
+                if (btn) {
+                    btn.addEventListener('click', toggleLang);
+                }
+            });
+
+        })();
+    </script>
 
 </body>
 </html>
