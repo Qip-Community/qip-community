@@ -7,13 +7,13 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #0d0f14;
-    color: #e0e0e0;
+    background: #0b0e14;
+    color: #e4e4e4;
     line-height: 1.6;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -24,14 +24,19 @@ a {
 }
 
 a:hover {
-    color: #fff;
+    color: #ffffff;
 }
 
 /* ШАПКА */
 header {
-    background: #161a20;
-    padding: 20px 0;
-    border-bottom: 1px solid #2a2f38;
+    background: #12161e;
+    padding: 18px 0;
+    border-bottom: 1px solid #282f3a;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    background: rgba(18, 22, 30, 0.9);
 }
 
 .header-flex {
@@ -45,12 +50,18 @@ header {
     font-size: 22px;
     font-weight: bold;
     color: #8ab4f8;
+    letter-spacing: 0.5px;
 }
 
 nav a {
-    margin-left: 25px;
+    margin-left: 28px;
     font-weight: 500;
-    color: #aaa;
+    color: #aab;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #8ab4f8;
 }
 
 nav a.active {
@@ -64,9 +75,17 @@ nav a.active {
     padding: 80px 20px 60px;
 }
 
-.hero h1 {
+.hero-icon {
     font-size: 64px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.hero h1 {
+    font-size: 68px;
     color: #8ab4f8;
+    font-weight: 800;
+    letter-spacing: -1px;
 }
 
 .hero .subtitle {
@@ -82,34 +101,92 @@ nav a.active {
     color: #aaa;
 }
 
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
 /* КНОПКИ */
 .btn {
     display: inline-block;
     background: #8ab4f8;
-    color: #0d0f14;
+    color: #0b0e14;
     padding: 14px 32px;
     border-radius: 30px;
     font-weight: 600;
-    transition: 0.2s;
+    transition: 0.25s;
+    border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
     background: #6d9ee0;
     transform: scale(1.03);
+    color: #0b0e14;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #8ab4f8;
+    border: 2px solid #8ab4f8;
+}
+
+.btn-secondary:hover {
+    background: #8ab4f8;
+    color: #0b0e14;
 }
 
 /* СЕКЦИИ */
 .about,
 .download-section {
     padding: 60px 20px;
-    border-top: 1px solid #2a2f38;
+    border-top: 1px solid #282f3a;
 }
 
 .about h2,
 .download-section h2 {
-    font-size: 28px;
+    font-size: 30px;
     margin-bottom: 15px;
     color: #8ab4f8;
+}
+
+.about p {
+    color: #bbb;
+    max-width: 700px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.feature-item {
+    flex: 1 1 180px;
+    background: #12161e;
+    padding: 25px 20px;
+    border-radius: 12px;
+    border: 1px solid #282f3a;
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.feature-item h3 {
+    color: #8ab4f8;
+    margin-bottom: 6px;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #999;
 }
 
 .download-section .btn {
@@ -122,7 +199,7 @@ nav a.active {
 }
 
 .download-page h1 {
-    font-size: 40px;
+    font-size: 42px;
     color: #8ab4f8;
 }
 
@@ -133,11 +210,16 @@ nav a.active {
 }
 
 .platform-card {
-    background: #161a20;
+    background: #12161e;
     padding: 30px;
     border-radius: 12px;
     margin-bottom: 25px;
-    border: 1px solid #2a2f38;
+    border: 1px solid #282f3a;
+    transition: 0.2s;
+}
+
+.platform-card:hover {
+    border-color: #8ab4f8;
 }
 
 .platform-card h2 {
@@ -153,11 +235,12 @@ nav a.active {
 
 .badge {
     display: inline-block;
-    background: #2a2f38;
+    background: #282f3a;
     color: #888;
     padding: 4px 16px;
     border-radius: 20px;
     font-size: 14px;
+    font-weight: 500;
 }
 
 .help-card {
@@ -166,25 +249,28 @@ nav a.active {
 
 /* ПОДВАЛ */
 footer {
-    background: #161a20;
+    background: #12161e;
     padding: 30px 20px;
     text-align: center;
-    border-top: 1px solid #2a2f38;
+    border-top: 1px solid #282f3a;
 }
 
 footer p {
     color: #777;
     font-size: 14px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .socials {
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 .socials a {
-    margin: 0 10px;
+    margin: 0 12px;
     color: #777;
     font-size: 14px;
+    transition: 0.2s;
 }
 
 .socials a:hover {
@@ -192,12 +278,15 @@ footer p {
 }
 
 /* АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ */
-@media (max-width: 600px) {
+@media (max-width: 640px) {
     .hero h1 {
         font-size: 40px;
     }
     .hero .subtitle {
         font-size: 20px;
+    }
+    .hero-icon {
+        font-size: 48px;
     }
     .header-flex {
         flex-direction: column;
@@ -205,5 +294,19 @@ footer p {
     }
     nav a {
         margin: 0 12px;
+        font-size: 15px;
+    }
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature-item {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 300px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
     }
 }
