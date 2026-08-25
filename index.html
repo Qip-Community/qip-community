@@ -9,111 +9,183 @@
 </head>
 <body>
 
-    <header>
-        <div class="container header-flex">
-            <div class="logo">📡 QIP <span>Community</span></div>
-            <nav>
-                <a href="index.html" class="active" data-i18n="nav-home">Главная</a>
-                <a href="download.html" data-i18n="nav-download">Скачать</a>
-                <a href="about.html" data-i18n="nav-about">О нас</a>
-                <a href="team.html" data-i18n="nav-team">Команда</a>
-                <a href="guide.html" data-i18n="nav-guide">Инструкция</a>
-                <a href="news.html" data-i18n="nav-news">Новости</a>
-                <a href="reviews.html" data-i18n="nav-guestbook">Гостевая</a>
-                <a href="https://discord.gg/VSJpGajNmP" target="_blank" data-i18n="nav-discord">Discord</a>
-                <button id="lang-toggle" style="background: none; border: 2px solid #ffcc00; color: #fff; padding: 2px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 12px; margin-left: 15px;">RU / EN</button>
-            </nav>
+    <!-- ============================================ -->
+    <!-- ТЕХНИЧЕСКИЕ РАБОТЫ (ЗАГЛУШКА)               -->
+    <!-- ============================================ -->
+    <div id="maintenance-mode" style="display: none; height: 100vh; display: flex; justify-content: center; align-items: center; background: #dce5f0; font-family: Tahoma, sans-serif; text-align: center;">
+        <div style="background: #ffffff; padding: 50px 40px; border-radius: 12px; border: 1px solid #b3c3d4; max-width: 500px;">
+            <div style="font-size: 60px;">🔧</div>
+            <h1 style="font-size: 48px; color: #0d2f5e;">Технические работы</h1>
+            <p style="font-size: 18px; color: #333; margin-top: 10px;">Сайт временно недоступен.<br />Мы проводим плановое обслуживание.</p>
+            <p style="font-size:14px; color:#888; margin-top:20px;">Скоро всё заработает!</p>
         </div>
-    </header>
+    </div>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-icon">💬</div>
-            <h1 data-i18n="hero-title">QIP 2005</h1>
-            <p class="subtitle" data-i18n="hero-subtitle">Снова в строю!</p>
-            <p data-i18n="hero-desc">Легендарный мессенджер возвращается. Присоединяйся к сообществу, которое помнит старый интернет.</p>
-            <div class="hero-buttons">
-                <a href="https://discord.gg/VSJpGajNmP" target="_blank" class="btn" data-i18n="hero-btn-discord">Перейти в Discord →</a>
-                <a href="download.html" class="btn btn-secondary" data-i18n="hero-btn-download">Скачать QIP</a>
+    <!-- ============================================ -->
+    <!-- ОСНОВНОЙ САЙТ                                -->
+    <!-- ============================================ -->
+    <div id="main-site">
+
+        <header>
+            <div class="container header-flex">
+                <div class="logo">📡 QIP <span>Community</span></div>
+                <nav>
+                    <a href="index.html" class="active" data-i18n="nav-home">Главная</a>
+                    <a href="download.html" data-i18n="nav-download">Скачать</a>
+                    <a href="about.html" data-i18n="nav-about">О нас</a>
+                    <a href="team.html" data-i18n="nav-team">Команда</a>
+                    <a href="guide.html" data-i18n="nav-guide">Инструкция</a>
+                    <a href="news.html" data-i18n="nav-news">Новости</a>
+                    <a href="reviews.html" data-i18n="nav-guestbook">Гостевая</a>
+                    <a href="https://discord.gg/VSJpGajNmP" target="_blank" data-i18n="nav-discord">Discord</a>
+                    <button id="lang-toggle" style="background: none; border: 2px solid #ffcc00; color: #fff; padding: 2px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 12px; margin-left: 15px;">RU / EN</button>
+                </nav>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <section class="about">
-        <div class="container">
-            <h2 data-i18n="about-title">📌 О нас</h2>
-            <p data-i18n="about-desc">QIP Community — неофициальное сообщество фанатов, которые оживляют QIP 2005. Мы создаём репаки, пишем инструкции и помогаем с настройкой. Всё для того, чтобы старый интернет снова задышал.</p>
-            <div class="features">
-                <div class="feature-item">
-                    <span class="feature-icon">📦</span>
-                    <h3 data-i18n="feature-repack-title">Репаки</h3>
-                    <p data-i18n="feature-repack-desc">Готовые сборки QIP для Windows 10/11</p>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-icon">📖</span>
-                    <h3 data-i18n="feature-guide-title">Инструкции</h3>
-                    <p data-i18n="feature-guide-desc">Подробные гайды по установке и настройке</p>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-icon">💬</span>
-                    <h3 data-i18n="feature-support-title">Поддержка</h3>
-                    <p data-i18n="feature-support-desc">Помощь в Discord от сообщества и админов</p>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-icon">💬</div>
+                <h1 data-i18n="hero-title">QIP 2005</h1>
+                <p class="subtitle" data-i18n="hero-subtitle">Снова в строю!</p>
+                <p data-i18n="hero-desc">Легендарный мессенджер возвращается. Присоединяйся к сообществу, которое помнит старый интернет.</p>
+                <div class="hero-buttons">
+                    <a href="https://discord.gg/VSJpGajNmP" target="_blank" class="btn" data-i18n="hero-btn-discord">Перейти в Discord →</a>
+                    <a href="download.html" class="btn btn-secondary" data-i18n="hero-btn-download">Скачать QIP</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="download-section">
-        <div class="container">
-            <h2 data-i18n="download-title">📥 Скачивай QIP</h2>
-            <p data-i18n="download-desc">Выбери свою платформу и возвращайся в старый добрый интернет.</p>
-            <a href="download.html" class="btn" data-i18n="download-btn">Перейти к скачиванию →</a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p data-i18n="footer-text">QIP Community © 2026 — неофициальный фанатский проект.</p>
-            <div class="socials">
-                <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
-                <a href="#">YouTube</a>
-                <a href="#">TikTok</a>
+        <section class="about">
+            <div class="container">
+                <h2 data-i18n="about-title">📌 О нас</h2>
+                <p data-i18n="about-desc">QIP Community — неофициальное сообщество фанатов, которые оживляют QIP 2005. Мы создаём репаки, пишем инструкции и помогаем с настройкой. Всё для того, чтобы старый интернет снова задышал.</p>
+                <div class="features">
+                    <div class="feature-item">
+                        <span class="feature-icon">📦</span>
+                        <h3 data-i18n="feature-repack-title">Репаки</h3>
+                        <p data-i18n="feature-repack-desc">Готовые сборки QIP для Windows 10/11</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📖</span>
+                        <h3 data-i18n="feature-guide-title">Инструкции</h3>
+                        <p data-i18n="feature-guide-desc">Подробные гайды по установке и настройке</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💬</span>
+                        <h3 data-i18n="feature-support-title">Поддержка</h3>
+                        <p data-i18n="feature-support-desc">Помощь в Discord от сообщества и админов</p>
+                    </div>
+                </div>
             </div>
-            <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "310462293df347eaaf0c101f050bdbcf"}'></script>
-        </div>
-    </footer>
+        </section>
+
+        <section class="download-section">
+            <div class="container">
+                <h2 data-i18n="download-title">📥 Скачивай QIP</h2>
+                <p data-i18n="download-desc">Выбери свою платформу и возвращайся в старый добрый интернет.</p>
+                <a href="download.html" class="btn" data-i18n="download-btn">Перейти к скачиванию →</a>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p data-i18n="footer-text">QIP Community © 2026 — неофициальный фанатский проект.</p>
+                <div class="socials">
+                    <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
+                    <a href="#">YouTube</a>
+                    <a href="#">TikTok</a>
+                </div>
+                <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "310462293df347eaaf0c101f050bdbcf"}'></script>
+            </div>
+        </footer>
+
+    </div>
 
     <script>
         (function() {
+
+            // ============================================
+            // ПЕРЕКЛЮЧАТЕЛЬ ТЕХНИЧЕСКИХ РАБОТ
+            // true  = сайт закрыт (показывается заглушка)
+            // false = сайт открыт
+            // ============================================
+            const MAINTENANCE_MODE = false; // <- МЕНЯЙ ТУТ: true / false
+
+            // ============================================
+            // ПЕРЕВОДЫ
+            // ============================================
             const translations = {
                 ru: {
-                    'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-discord': 'Discord',
-                    'hero-title': 'QIP 2005', 'hero-subtitle': 'Снова в строю!',
+                    'nav-home': 'Главная',
+                    'nav-download': 'Скачать',
+                    'nav-about': 'О нас',
+                    'nav-team': 'Команда',
+                    'nav-guide': 'Инструкция',
+                    'nav-news': 'Новости',
+                    'nav-guestbook': 'Гостевая',
+                    'nav-discord': 'Discord',
+                    'hero-title': 'QIP 2005',
+                    'hero-subtitle': 'Снова в строю!',
                     'hero-desc': 'Легендарный мессенджер возвращается. Присоединяйся к сообществу, которое помнит старый интернет.',
-                    'hero-btn-discord': 'Перейти в Discord →', 'hero-btn-download': 'Скачать QIP',
+                    'hero-btn-discord': 'Перейти в Discord →',
+                    'hero-btn-download': 'Скачать QIP',
                     'about-title': '📌 О нас',
                     'about-desc': 'QIP Community — неофициальное сообщество фанатов, которые оживляют QIP 2005. Мы создаём репаки, пишем инструкции и помогаем с настройкой. Всё для того, чтобы старый интернет снова задышал.',
-                    'feature-repack-title': 'Репаки', 'feature-repack-desc': 'Готовые сборки QIP для Windows 10/11',
-                    'feature-guide-title': 'Инструкции', 'feature-guide-desc': 'Подробные гайды по установке и настройке',
-                    'feature-support-title': 'Поддержка', 'feature-support-desc': 'Помощь в Discord от сообщества и админов',
-                    'download-title': '📥 Скачивай QIP', 'download-desc': 'Выбери свою платформу и возвращайся в старый добрый интернет.',
-                    'download-btn': 'Перейти к скачиванию →', 'footer-text': 'QIP Community © 2026 — неофициальный фанатский проект.'
+                    'feature-repack-title': 'Репаки',
+                    'feature-repack-desc': 'Готовые сборки QIP для Windows 10/11',
+                    'feature-guide-title': 'Инструкции',
+                    'feature-guide-desc': 'Подробные гайды по установке и настройке',
+                    'feature-support-title': 'Поддержка',
+                    'feature-support-desc': 'Помощь в Discord от сообщества и админов',
+                    'download-title': '📥 Скачивай QIP',
+                    'download-desc': 'Выбери свою платформу и возвращайся в старый добрый интернет.',
+                    'download-btn': 'Перейти к скачиванию →',
+                    'footer-text': 'QIP Community © 2026 — неофициальный фанатский проект.'
                 },
                 en: {
-                    'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-discord': 'Discord',
-                    'hero-title': 'QIP 2005', 'hero-subtitle': 'Back in action!',
+                    'nav-home': 'Home',
+                    'nav-download': 'Download',
+                    'nav-about': 'About',
+                    'nav-team': 'Team',
+                    'nav-guide': 'Guide',
+                    'nav-news': 'News',
+                    'nav-guestbook': 'Guestbook',
+                    'nav-discord': 'Discord',
+                    'hero-title': 'QIP 2005',
+                    'hero-subtitle': 'Back in action!',
                     'hero-desc': 'The legendary messenger is back. Join the community that remembers the old internet.',
-                    'hero-btn-discord': 'Join Discord →', 'hero-btn-download': 'Download QIP',
+                    'hero-btn-discord': 'Join Discord →',
+                    'hero-btn-download': 'Download QIP',
                     'about-title': '📌 About us',
                     'about-desc': 'QIP Community is an unofficial fan community reviving QIP 2005. We create repacks, write guides, and help with setup. All to bring the old internet back to life.',
-                    'feature-repack-title': 'Repacks', 'feature-repack-desc': 'Ready-to-use QIP builds for Windows 10/11',
-                    'feature-guide-title': 'Guides', 'feature-guide-desc': 'Detailed installation and setup tutorials',
-                    'feature-support-title': 'Support', 'feature-support-desc': 'Help in Discord from the community and admins',
-                    'download-title': '📥 Download QIP', 'download-desc': 'Choose your platform and return to the good old internet.',
-                    'download-btn': 'Go to download →', 'footer-text': 'QIP Community © 2026 — unofficial fan project.'
+                    'feature-repack-title': 'Repacks',
+                    'feature-repack-desc': 'Ready-to-use QIP builds for Windows 10/11',
+                    'feature-guide-title': 'Guides',
+                    'feature-guide-desc': 'Detailed installation and setup tutorials',
+                    'feature-support-title': 'Support',
+                    'feature-support-desc': 'Help in Discord from the community and admins',
+                    'download-title': '📥 Download QIP',
+                    'download-desc': 'Choose your platform and return to the good old internet.',
+                    'download-btn': 'Go to download →',
+                    'footer-text': 'QIP Community © 2026 — unofficial fan project.'
                 }
             };
 
+            // ============================================
+            // РЕЖИМ ТЕХНИЧЕСКИХ РАБОТ
+            // ============================================
+            if (MAINTENANCE_MODE) {
+                document.getElementById('main-site').style.display = 'none';
+                document.getElementById('maintenance-mode').style.display = 'flex';
+            } else {
+                document.getElementById('main-site').style.display = 'block';
+                document.getElementById('maintenance-mode').style.display = 'none';
+            }
+
+            // ============================================
+            // ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА
+            // ============================================
             let currentLang = localStorage.getItem('qip-lang') || 'ru';
 
             function setLanguage(lang) {
