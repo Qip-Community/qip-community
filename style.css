@@ -253,7 +253,9 @@ nav a.active {
 .team-page,
 .reviews-page,
 .privacy-page,
-.faq-page {
+.faq-page,
+.blog-page,
+.blog-post {
     padding: 35px 20px 30px;
     background: #f0f5fa;
     transition: background 0.3s;
@@ -266,7 +268,9 @@ nav a.active {
 .team-page h1,
 .reviews-page h1,
 .privacy-page h1,
-.faq-page h1 {
+.faq-page h1,
+.blog-page h1,
+.blog-post h1 {
     font-size: 28px;
     color: #0d2f5e;
     font-family: Tahoma, sans-serif;
@@ -280,7 +284,9 @@ nav a.active {
 .team-page .subtitle,
 .reviews-page .subtitle,
 .privacy-page .subtitle,
-.faq-page .subtitle {
+.faq-page .subtitle,
+.blog-page .subtitle,
+.blog-post .post-date {
     font-size: 14px;
     color: #444;
     margin-top: -4px;
@@ -598,6 +604,104 @@ footer p {
     transition: background 0.3s, color 0.3s;
 }
 
+.blog-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blog-card {
+    background: #f5f8fc;
+    border: 1px solid #b3c3d4;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.blog-card-image {
+    font-size: 48px;
+    flex-shrink: 0;
+    width: 60px;
+    text-align: center;
+}
+
+.blog-card-content {
+    flex: 1;
+}
+
+.blog-card-content h2 {
+    font-size: 18px;
+    margin-bottom: 6px;
+    font-family: Tahoma, sans-serif;
+}
+
+.blog-card-content h2 a {
+    color: #0d2f5e;
+    transition: color 0.3s;
+}
+
+.blog-card-content h2 a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+.blog-card-content p {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.blog-card-content .badge {
+    background: #c8d4e0;
+    color: #0d2f5e;
+    padding: 2px 12px;
+    font-size: 11px;
+    font-weight: bold;
+    border: 1px solid #8da0b8;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.btn-read {
+    display: inline-block;
+    margin-top: 8px;
+    color: #0d2f5e;
+    font-weight: bold;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.btn-read:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+.post-content p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 16px;
+    transition: color 0.3s;
+}
+
+.post-content code {
+    background: #c8d4e0;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #0d2f5e;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.post-content .btn {
+    margin-top: 10px;
+}
+
 @media (max-width: 640px) {
     .hero h1 {
         font-size: 32px;
@@ -646,6 +750,14 @@ footer p {
         font-size: 10px;
         padding: 1px 8px;
         margin-left: 5px;
+    }
+    .blog-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .blog-card-image {
+        width: auto;
     }
 }
 
@@ -765,7 +877,9 @@ body.dark-theme .news-page,
 body.dark-theme .team-page,
 body.dark-theme .reviews-page,
 body.dark-theme .privacy-page,
-body.dark-theme .faq-page {
+body.dark-theme .faq-page,
+body.dark-theme .blog-page,
+body.dark-theme .blog-post {
     background: #0d1117;
 }
 
@@ -776,7 +890,9 @@ body.dark-theme .news-page h1,
 body.dark-theme .team-page h1,
 body.dark-theme .reviews-page h1,
 body.dark-theme .privacy-page h1,
-body.dark-theme .faq-page h1 {
+body.dark-theme .faq-page h1,
+body.dark-theme .blog-page h1,
+body.dark-theme .blog-post h1 {
     color: #58a6ff;
     border-bottom: 2px solid #30363d;
 }
@@ -785,7 +901,9 @@ body.dark-theme .download-page .subtitle,
 body.dark-theme .team-page .subtitle,
 body.dark-theme .reviews-page .subtitle,
 body.dark-theme .privacy-page .subtitle,
-body.dark-theme .faq-page .subtitle {
+body.dark-theme .faq-page .subtitle,
+body.dark-theme .blog-page .subtitle,
+body.dark-theme .blog-post .post-date {
     color: #8b949e;
 }
 
@@ -894,6 +1012,46 @@ body.dark-theme .faq-item p {
 }
 
 body.dark-theme .faq-item code {
+    background: #30363d;
+    color: #58a6ff;
+}
+
+body.dark-theme .blog-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+}
+
+body.dark-theme .blog-card-content h2 a {
+    color: #58a6ff;
+}
+
+body.dark-theme .blog-card-content h2 a:hover {
+    color: #ffcc00;
+}
+
+body.dark-theme .blog-card-content p {
+    color: #8b949e;
+}
+
+body.dark-theme .blog-card-content .badge {
+    background: #30363d;
+    color: #8b949e;
+    border: 1px solid #30363d;
+}
+
+body.dark-theme .btn-read {
+    color: #58a6ff;
+}
+
+body.dark-theme .btn-read:hover {
+    color: #ffcc00;
+}
+
+body.dark-theme .post-content p {
+    color: #8b949e;
+}
+
+body.dark-theme .post-content code {
     background: #30363d;
     color: #58a6ff;
 }
