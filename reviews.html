@@ -140,11 +140,8 @@
 
         document.addEventListener("DOMContentLoaded", loadMessages);
 
-        // ============================
-        // ПЕРЕВОД
-        // ============================
         (function() {
-            const MAINTENANCE_MODE = true; //true = сайт закрыт, false = открыт
+            const MAINTENANCE_MODE = false;
 
             if (MAINTENANCE_MODE) {
                 document.getElementById('maintenance-mode').style.display = 'flex';
