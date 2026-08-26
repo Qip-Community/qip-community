@@ -30,6 +30,7 @@
                     <a href="guide.html" data-i18n="nav-guide">Инструкция</a>
                     <a href="news.html" data-i18n="nav-news">Новости</a>
                     <a href="reviews.html" data-i18n="nav-guestbook">Гостевая</a>
+                    <a href="faq.html" data-i18n="nav-faq">FAQ</a>
                     <a href="privacy.html" data-i18n="nav-privacy">Конфиденциальность</a>
                     <a href="https://discord.gg/VSJpGajNmP" target="_blank" data-i18n="nav-discord">Discord</a>
                     <button id="lang-toggle" class="lang-toggle">RU / EN</button>
@@ -89,7 +90,7 @@
 
             const translations = {
                 ru: {
-                    'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord',
+                    'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-faq': 'FAQ', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord',
                     'download-title': '📥 Скачать QIP', 'download-subtitle': 'Выбери свою платформу и начни общение',
                     'windows-title': '🪟 Windows', 'windows-desc': 'QIP 2005 Repack для Windows 10/11. Репак уже включает все настройки, осталось только установить.',
                     'windows-btn': 'Скачать для Windows →',
@@ -98,7 +99,7 @@
                     'footer-text': 'QIP Community © 2026 — неофициальный фанатский проект.'
                 },
                 en: {
-                    'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-privacy': 'Privacy', 'nav-discord': 'Discord',
+                    'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-faq': 'FAQ', 'nav-privacy': 'Privacy', 'nav-discord': 'Discord',
                     'download-title': '📥 Download QIP', 'download-subtitle': 'Choose your platform and start chatting',
                     'windows-title': '🪟 Windows', 'windows-desc': 'QIP 2005 Repack for Windows 10/11. The repack already includes all settings, just install it.',
                     'windows-btn': 'Download for Windows →',
@@ -127,24 +128,26 @@
                 setLanguage(nextLang);
             }
 
+            (function initTheme() {
+                const themeToggle = document.getElementById('theme-toggle');
+                if (!themeToggle) return;
+                const savedTheme = localStorage.getItem('qip-theme');
+                if (savedTheme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                    themeToggle.textContent = '☀️ Светлая';
+                }
+                themeToggle.addEventListener('click', function() {
+                    const isDark = document.body.classList.toggle('dark-theme');
+                    localStorage.setItem('qip-theme', isDark ? 'dark' : 'light');
+                    themeToggle.textContent = isDark ? '☀️ Светлая' : '🌙 Тёмная';
+                });
+            })();
+
             document.addEventListener('DOMContentLoaded', function() {
                 setLanguage(currentLang);
                 const langBtn = document.getElementById('lang-toggle');
                 if (langBtn) {
                     langBtn.addEventListener('click', toggleLang);
-                }
-                const themeToggle = document.getElementById('theme-toggle');
-                if (themeToggle) {
-                    const savedTheme = localStorage.getItem('qip-theme');
-                    if (savedTheme === 'dark') {
-                        document.body.classList.add('dark-theme');
-                        themeToggle.textContent = '☀️ Светлая';
-                    }
-                    themeToggle.addEventListener('click', function() {
-                        const isDark = document.body.classList.toggle('dark-theme');
-                        localStorage.setItem('qip-theme', isDark ? 'dark' : 'light');
-                        themeToggle.textContent = isDark ? '☀️ Светлая' : '🌙 Тёмная';
-                    });
                 }
             });
 

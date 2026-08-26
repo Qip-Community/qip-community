@@ -10,6 +10,7 @@ body {
     color: #1a1a1a;
     font-size: 13px;
     line-height: 1.5;
+    transition: background 0.3s, color 0.3s;
 }
 
 .container {
@@ -32,6 +33,7 @@ header {
     background: linear-gradient(to bottom, #1a4b8c, #0d2f5e);
     padding: 8px 0 6px 0;
     border-bottom: 2px solid #ffcc00;
+    transition: background 0.3s;
 }
 
 .header-flex {
@@ -67,6 +69,7 @@ nav a {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    transition: color 0.3s;
 }
 
 nav a:hover {
@@ -105,6 +108,7 @@ nav a.active {
     padding: 40px 20px 35px;
     background: linear-gradient(to bottom, #f0f5fa, #dce5f0);
     border-bottom: 1px solid #b3c3d4;
+    transition: background 0.3s;
 }
 
 .hero-icon {
@@ -120,6 +124,7 @@ nav a.active {
     font-family: Tahoma, sans-serif;
     letter-spacing: -1px;
     text-shadow: 1px 1px 0 #b3c3d4;
+    transition: color 0.3s;
 }
 
 .hero .subtitle {
@@ -127,6 +132,7 @@ nav a.active {
     color: #1a4b8c;
     margin-bottom: 10px;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 .hero p {
@@ -134,6 +140,7 @@ nav a.active {
     max-width: 600px;
     margin: 8px auto 25px;
     color: #2a2a2a;
+    transition: color 0.3s;
 }
 
 .hero-buttons {
@@ -155,6 +162,7 @@ nav a.active {
     cursor: pointer;
     font-family: Tahoma, sans-serif;
     text-transform: uppercase;
+    transition: background 0.3s, color 0.3s, border 0.3s;
 }
 
 .btn:hover {
@@ -179,6 +187,7 @@ nav a.active {
     padding: 35px 20px 30px;
     border-top: 1px solid #b3c3d4;
     background: #f5f8fc;
+    transition: background 0.3s, border-color 0.3s;
 }
 
 .about h2,
@@ -187,12 +196,14 @@ nav a.active {
     color: #0d2f5e;
     margin-bottom: 8px;
     font-family: Tahoma, sans-serif;
+    transition: color 0.3s;
 }
 
 .about p {
     color: #2a2a2a;
     font-size: 13px;
     max-width: 700px;
+    transition: color 0.3s;
 }
 
 .features {
@@ -208,6 +219,7 @@ nav a.active {
     padding: 16px 14px;
     border: 1px solid #b3c3d4;
     text-align: center;
+    transition: background 0.3s, border-color 0.3s;
 }
 
 .feature-icon {
@@ -221,11 +233,13 @@ nav a.active {
     font-size: 14px;
     margin-bottom: 2px;
     font-family: Tahoma, sans-serif;
+    transition: color 0.3s;
 }
 
 .feature-item p {
     font-size: 12px;
     color: #444;
+    transition: color 0.3s;
 }
 
 .download-section .btn {
@@ -238,9 +252,11 @@ nav a.active {
 .news-page,
 .team-page,
 .reviews-page,
-.privacy-page {
+.privacy-page,
+.faq-page {
     padding: 35px 20px 30px;
     background: #f0f5fa;
+    transition: background 0.3s;
 }
 
 .download-page h1,
@@ -249,23 +265,27 @@ nav a.active {
 .news-page h1,
 .team-page h1,
 .reviews-page h1,
-.privacy-page h1 {
+.privacy-page h1,
+.faq-page h1 {
     font-size: 28px;
     color: #0d2f5e;
     font-family: Tahoma, sans-serif;
     border-bottom: 2px solid #b3c3d4;
     padding-bottom: 6px;
     margin-bottom: 4px;
+    transition: color 0.3s, border-color 0.3s;
 }
 
 .download-page .subtitle,
 .team-page .subtitle,
 .reviews-page .subtitle,
-.privacy-page .subtitle {
+.privacy-page .subtitle,
+.faq-page .subtitle {
     font-size: 14px;
     color: #444;
     margin-top: -4px;
     margin-bottom: 22px;
+    transition: color 0.3s;
 }
 
 .platform-card {
@@ -273,6 +293,7 @@ nav a.active {
     padding: 18px 22px;
     margin-bottom: 16px;
     border: 1px solid #b3c3d4;
+    transition: background 0.3s, border-color 0.3s;
 }
 
 .platform-card h2 {
@@ -280,12 +301,14 @@ nav a.active {
     color: #0d2f5e;
     margin-bottom: 4px;
     font-family: Tahoma, sans-serif;
+    transition: color 0.3s;
 }
 
 .platform-card p {
     font-size: 13px;
     margin-bottom: 10px;
     color: #333;
+    transition: color 0.3s;
 }
 
 .badge {
@@ -296,6 +319,7 @@ nav a.active {
     font-size: 11px;
     font-weight: bold;
     border: 1px solid #8da0b8;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .help-card {
@@ -308,6 +332,7 @@ footer {
     padding: 18px 20px;
     text-align: center;
     border-top: 1px solid #7a9ec4;
+    transition: background 0.3s, border-color 0.3s;
 }
 
 footer p {
@@ -315,6 +340,7 @@ footer p {
     font-size: 11px;
     max-width: 600px;
     margin: 0 auto;
+    transition: color 0.3s;
 }
 
 .socials {
@@ -326,6 +352,7 @@ footer p {
     color: #0d2f5e;
     font-size: 12px;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 .socials a:hover {
@@ -333,30 +360,12 @@ footer p {
     text-decoration: underline;
 }
 
-.guide-page ol {
-    padding-left: 22px;
-    margin: 16px 0;
-}
-
-.guide-page li {
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.guide-page code {
-    background: #c8d4e0;
-    padding: 2px 8px;
-    border-radius: 3px;
-    font-size: 13px;
-    color: #0d2f5e;
-    font-weight: bold;
-}
-
 .review-form {
     background: #f5f8fc;
     padding: 20px 22px;
     border: 1px solid #b3c3d4;
     margin-bottom: 25px;
+    transition: background 0.3s, border-color 0.3s;
 }
 
 .review-form h2 {
@@ -364,6 +373,7 @@ footer p {
     color: #0d2f5e;
     margin-bottom: 10px;
     font-family: Tahoma, sans-serif;
+    transition: color 0.3s;
 }
 
 .review-form input,
@@ -376,6 +386,7 @@ footer p {
     font-family: Tahoma, sans-serif;
     font-size: 13px;
     background: #ffffff;
+    transition: background 0.3s, border-color 0.3s, color 0.3s;
 }
 
 .review-form input:focus,
@@ -405,6 +416,7 @@ footer p {
     padding: 14px 18px;
     margin-bottom: 12px;
     border: 1px solid #b3c3d4;
+    transition: background 0.3s, border-color 0.3s;
 }
 
 .review-header {
@@ -417,17 +429,20 @@ footer p {
 .review-header strong {
     color: #0d2f5e;
     font-size: 14px;
+    transition: color 0.3s;
 }
 
 .review-date {
     font-size: 11px;
     color: #777;
+    transition: color 0.3s;
 }
 
 .review-item p {
     color: #333;
     font-size: 13px;
     margin: 0;
+    transition: color 0.3s;
 }
 
 .team-grid {
@@ -443,6 +458,7 @@ footer p {
     padding: 20px 16px;
     border: 1px solid #b3c3d4;
     text-align: center;
+    transition: background 0.3s, border-color 0.3s;
 }
 
 .team-avatar {
@@ -456,11 +472,13 @@ footer p {
     font-size: 16px;
     margin-bottom: 4px;
     font-family: Tahoma, sans-serif;
+    transition: color 0.3s;
 }
 
 .team-card p {
     font-size: 12px;
     color: #444;
+    transition: color 0.3s;
 }
 
 .news-item {
@@ -468,17 +486,20 @@ footer p {
     padding: 16px 20px;
     border: 1px solid #b3c3d4;
     margin-bottom: 14px;
+    transition: background 0.3s, border-color 0.3s;
 }
 
 .news-item h2 {
     font-size: 16px;
     color: #0d2f5e;
     margin-bottom: 4px;
+    transition: color 0.3s;
 }
 
 .news-item p {
     color: #333;
     margin-bottom: 4px;
+    transition: color 0.3s;
 }
 
 .news-item .badge {
@@ -490,6 +511,7 @@ footer p {
     padding: 18px 22px;
     border: 1px solid #b3c3d4;
     margin-bottom: 16px;
+    transition: background 0.3s, border-color 0.3s;
 }
 
 .privacy-block h2 {
@@ -497,12 +519,14 @@ footer p {
     color: #0d2f5e;
     margin-bottom: 6px;
     font-family: Tahoma, sans-serif;
+    transition: color 0.3s;
 }
 
 .privacy-block p,
 .privacy-block li {
     color: #333;
     font-size: 13px;
+    transition: color 0.3s;
 }
 
 .privacy-block ul {
@@ -512,6 +536,66 @@ footer p {
 
 .privacy-block li {
     margin-bottom: 6px;
+}
+
+.guide-page ol {
+    padding-left: 22px;
+    margin: 16px 0;
+}
+
+.guide-page li {
+    margin-bottom: 10px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.guide-page code {
+    background: #c8d4e0;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #0d2f5e;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.faq-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    background: #f5f8fc;
+    padding: 18px 22px;
+    border: 1px solid #b3c3d4;
+    border-radius: 6px;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.faq-item h3 {
+    font-size: 16px;
+    color: #0d2f5e;
+    font-family: Tahoma, sans-serif;
+    margin-bottom: 6px;
+    transition: color 0.3s;
+}
+
+.faq-item p {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.6;
+    transition: color 0.3s;
+}
+
+.faq-item code {
+    background: #c8d4e0;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #0d2f5e;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
 }
 
 @media (max-width: 640px) {
@@ -586,6 +670,11 @@ body.dark-theme nav a {
 body.dark-theme nav a:hover,
 body.dark-theme nav a.active {
     color: #ffcc00;
+}
+
+body.dark-theme .lang-toggle,
+body.dark-theme .theme-toggle {
+    color: #fff;
 }
 
 body.dark-theme .hero {
@@ -675,7 +764,8 @@ body.dark-theme .guide-page,
 body.dark-theme .news-page,
 body.dark-theme .team-page,
 body.dark-theme .reviews-page,
-body.dark-theme .privacy-page {
+body.dark-theme .privacy-page,
+body.dark-theme .faq-page {
     background: #0d1117;
 }
 
@@ -685,7 +775,8 @@ body.dark-theme .guide-page h1,
 body.dark-theme .news-page h1,
 body.dark-theme .team-page h1,
 body.dark-theme .reviews-page h1,
-body.dark-theme .privacy-page h1 {
+body.dark-theme .privacy-page h1,
+body.dark-theme .faq-page h1 {
     color: #58a6ff;
     border-bottom: 2px solid #30363d;
 }
@@ -693,7 +784,8 @@ body.dark-theme .privacy-page h1 {
 body.dark-theme .download-page .subtitle,
 body.dark-theme .team-page .subtitle,
 body.dark-theme .reviews-page .subtitle,
-body.dark-theme .privacy-page .subtitle {
+body.dark-theme .privacy-page .subtitle,
+body.dark-theme .faq-page .subtitle {
     color: #8b949e;
 }
 
@@ -785,6 +877,24 @@ body.dark-theme .privacy-block li {
 }
 
 body.dark-theme .privacy-block a {
+    color: #58a6ff;
+}
+
+body.dark-theme .faq-item {
+    background: #161b22;
+    border: 1px solid #30363d;
+}
+
+body.dark-theme .faq-item h3 {
+    color: #58a6ff;
+}
+
+body.dark-theme .faq-item p {
+    color: #8b949e;
+}
+
+body.dark-theme .faq-item code {
+    background: #30363d;
     color: #58a6ff;
 }
 
