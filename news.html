@@ -42,6 +42,14 @@
             <div class="container">
                 <h1 data-i18n="news-title">📰 Новости сообщества</h1>
 
+                <!-- НОВОСТЬ О ТЁМНОЙ ТЕМЕ -->
+                <div class="news-item">
+                    <h2 data-i18n="news-theme-title">🌙 Добавлена тёмная тема</h2>
+                    <p data-i18n="news-theme-desc">Теперь на сайте QIP Community доступна тёмная тема! Нажмите на кнопку «🌙 Тема» в шапке сайта, чтобы переключить оформление. Выбор темы сохраняется в браузере автоматически.</p>
+                    <span class="badge">26 августа 2026</span>
+                </div>
+
+                <!-- НОВОСТЬ О КОНФИДЕНЦИАЛЬНОСТИ -->
                 <div class="news-item">
                     <h2 data-i18n="news-privacy-title">🔒 Добавлена страница «Конфиденциальность»</h2>
                     <p data-i18n="news-privacy-desc">Теперь на сайте QIP Community доступна страница с политикой конфиденциальности. В ней описано, какие данные мы собираем, как их используем и как защищаем. Страница доступна по ссылке в главном меню.</p>
@@ -145,6 +153,8 @@
                 ru: {
                     'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord',
                     'news-title': '📰 Новости сообщества',
+                    'news-theme-title': '🌙 Добавлена тёмная тема',
+                    'news-theme-desc': 'Теперь на сайте QIP Community доступна тёмная тема! Нажмите на кнопку «🌙 Тема» в шапке сайта, чтобы переключить оформление. Выбор темы сохраняется в браузере автоматически.',
                     'news-privacy-title': '🔒 Добавлена страница «Конфиденциальность»',
                     'news-privacy-desc': 'Теперь на сайте QIP Community доступна страница с политикой конфиденциальности. В ней описано, какие данные мы собираем, как их используем и как защищаем. Страница доступна по ссылке в главном меню.',
                     'news-1-title': '🔧 Технические работы завершены',
@@ -174,6 +184,8 @@
                 en: {
                     'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-privacy': 'Privacy', 'nav-discord': 'Discord',
                     'news-title': '📰 Community News',
+                    'news-theme-title': '🌙 Dark Theme Added',
+                    'news-theme-desc': 'The QIP Community website now has a dark theme! Click the "🌙 Theme" button in the header to switch. Your choice is automatically saved in your browser.',
                     'news-privacy-title': '🔒 Privacy Policy Page Added',
                     'news-privacy-desc': 'The QIP Community website now has a privacy policy page. It describes what data we collect, how we use it, and how we protect it. The page is available via the link in the main menu.',
                     'news-1-title': '🔧 Technical work completed',
@@ -221,24 +233,26 @@
                 setLanguage(nextLang);
             }
 
+            (function initTheme() {
+                const themeToggle = document.getElementById('theme-toggle');
+                if (!themeToggle) return;
+                const savedTheme = localStorage.getItem('qip-theme');
+                if (savedTheme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                    themeToggle.textContent = '☀️ Светлая';
+                }
+                themeToggle.addEventListener('click', function() {
+                    const isDark = document.body.classList.toggle('dark-theme');
+                    localStorage.setItem('qip-theme', isDark ? 'dark' : 'light');
+                    themeToggle.textContent = isDark ? '☀️ Светлая' : '🌙 Тёмная';
+                });
+            })();
+
             document.addEventListener('DOMContentLoaded', function() {
                 setLanguage(currentLang);
                 const langBtn = document.getElementById('lang-toggle');
                 if (langBtn) {
                     langBtn.addEventListener('click', toggleLang);
-                }
-                const themeToggle = document.getElementById('theme-toggle');
-                if (themeToggle) {
-                    const savedTheme = localStorage.getItem('qip-theme');
-                    if (savedTheme === 'dark') {
-                        document.body.classList.add('dark-theme');
-                        themeToggle.textContent = '☀️ Светлая';
-                    }
-                    themeToggle.addEventListener('click', function() {
-                        const isDark = document.body.classList.toggle('dark-theme');
-                        localStorage.setItem('qip-theme', isDark ? 'dark' : 'light');
-                        themeToggle.textContent = isDark ? '☀️ Светлая' : '🌙 Тёмная';
-                    });
                 }
             });
 
