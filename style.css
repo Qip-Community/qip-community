@@ -563,32 +563,6 @@ footer p {
     transition: background 0.3s, color 0.3s;
 }
 
-/* ПЛАВАЮЩАЯ КНОПКА "НАВЕРХ" */
-#back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #0d2f5e;
-    color: #fff;
-    border: 2px solid #ffcc00;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    cursor: pointer;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s;
-    z-index: 1000;
-}
-
-#back-to-top:hover {
-    background: #ffcc00;
-    color: #0d2f5e;
-    transform: scale(1.1);
-}
-
 /* АДАПТАЦИЯ */
 @media (max-width: 640px) {
     .hero h1 {
@@ -926,14 +900,4 @@ body.dark-theme #maintenance-mode h1 {
 
 body.dark-theme #maintenance-mode p {
     color: #8b949e !important;
-}
-
-body.dark-theme #back-to-top {
-    background: #1f6feb;
-    border-color: #58a6ff;
-}
-
-body.dark-theme #back-to-top:hover {
-    background: #58a6ff;
-    color: #0d1117;
 }
