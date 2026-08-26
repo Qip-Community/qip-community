@@ -10,7 +10,6 @@ body {
     color: #1a1a1a;
     font-size: 13px;
     line-height: 1.5;
-    transition: background 0.3s, color 0.3s;
 }
 
 .container {
@@ -29,12 +28,10 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ШАПКА */
 header {
     background: linear-gradient(to bottom, #1a4b8c, #0d2f5e);
     padding: 8px 0 6px 0;
     border-bottom: 2px solid #ffcc00;
-    transition: background 0.3s;
 }
 
 .header-flex {
@@ -70,7 +67,6 @@ nav a {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    transition: color 0.3s;
 }
 
 nav a:hover {
@@ -84,7 +80,6 @@ nav a.active {
     padding-bottom: 2px;
 }
 
-/* КНОПКИ В МЕНЮ */
 .lang-toggle,
 .theme-toggle {
     background: none;
@@ -96,7 +91,6 @@ nav a.active {
     font-weight: bold;
     font-size: 12px;
     margin-left: 10px;
-    transition: 0.3s;
 }
 
 .lang-toggle:hover,
@@ -105,19 +99,11 @@ nav a.active {
     color: #0d2f5e;
 }
 
-/* ГЛАВНЫЙ ЭКРАН */
 .hero {
     text-align: center;
     padding: 40px 20px 35px;
     background: linear-gradient(to bottom, #f0f5fa, #dce5f0);
     border-bottom: 1px solid #b3c3d4;
-    transition: background 0.3s;
-}
-
-.hero-icon {
-    font-size: 48px;
-    margin-bottom: 6px;
-    display: block;
 }
 
 .hero h1 {
@@ -127,7 +113,6 @@ nav a.active {
     font-family: Tahoma, sans-serif;
     letter-spacing: -1px;
     text-shadow: 1px 1px 0 #b3c3d4;
-    transition: color 0.3s;
 }
 
 .hero .subtitle {
@@ -135,7 +120,6 @@ nav a.active {
     color: #1a4b8c;
     margin-bottom: 10px;
     font-weight: bold;
-    transition: color 0.3s;
 }
 
 .hero p {
@@ -143,10 +127,15 @@ nav a.active {
     max-width: 600px;
     margin: 8px auto 25px;
     color: #2a2a2a;
-    transition: color 0.3s;
 }
 
-/* КНОПКИ */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
 .btn {
     display: inline-block;
     background: linear-gradient(to bottom, #f5f9ff, #c0d8f0);
@@ -159,7 +148,6 @@ nav a.active {
     cursor: pointer;
     font-family: Tahoma, sans-serif;
     text-transform: uppercase;
-    transition: background 0.3s, color 0.3s, border 0.3s;
 }
 
 .btn:hover {
@@ -179,13 +167,11 @@ nav a.active {
     border-color: #0d2f5e;
 }
 
-/* СЕКЦИИ */
 .about,
 .download-section {
     padding: 35px 20px 30px;
     border-top: 1px solid #b3c3d4;
     background: #f5f8fc;
-    transition: background 0.3s, border-color 0.3s;
 }
 
 .about h2,
@@ -194,17 +180,14 @@ nav a.active {
     color: #0d2f5e;
     margin-bottom: 8px;
     font-family: Tahoma, sans-serif;
-    transition: color 0.3s;
 }
 
 .about p {
     color: #2a2a2a;
     font-size: 13px;
     max-width: 700px;
-    transition: color 0.3s;
 }
 
-/* ФИЧИ */
 .features {
     display: flex;
     flex-wrap: wrap;
@@ -218,7 +201,6 @@ nav a.active {
     padding: 16px 14px;
     border: 1px solid #b3c3d4;
     text-align: center;
-    transition: background 0.3s, border-color 0.3s;
 }
 
 .feature-icon {
@@ -232,20 +214,17 @@ nav a.active {
     font-size: 14px;
     margin-bottom: 2px;
     font-family: Tahoma, sans-serif;
-    transition: color 0.3s;
 }
 
 .feature-item p {
     font-size: 12px;
     color: #444;
-    transition: color 0.3s;
 }
 
 .download-section .btn {
     margin-top: 10px;
 }
 
-/* СТРАНИЦЫ */
 .download-page,
 .about-page,
 .guide-page,
@@ -255,7 +234,6 @@ nav a.active {
 .privacy-page {
     padding: 35px 20px 30px;
     background: #f0f5fa;
-    transition: background 0.3s;
 }
 
 .download-page h1,
@@ -271,7 +249,6 @@ nav a.active {
     border-bottom: 2px solid #b3c3d4;
     padding-bottom: 6px;
     margin-bottom: 4px;
-    transition: color 0.3s, border-color 0.3s;
 }
 
 .download-page .subtitle,
@@ -282,16 +259,13 @@ nav a.active {
     color: #444;
     margin-top: -4px;
     margin-bottom: 22px;
-    transition: color 0.3s;
 }
 
-/* КАРТОЧКИ */
 .platform-card {
     background: #f5f8fc;
     padding: 18px 22px;
     margin-bottom: 16px;
     border: 1px solid #b3c3d4;
-    transition: background 0.3s, border-color 0.3s;
 }
 
 .platform-card h2 {
@@ -299,14 +273,12 @@ nav a.active {
     color: #0d2f5e;
     margin-bottom: 4px;
     font-family: Tahoma, sans-serif;
-    transition: color 0.3s;
 }
 
 .platform-card p {
     font-size: 13px;
     margin-bottom: 10px;
     color: #333;
-    transition: color 0.3s;
 }
 
 .badge {
@@ -317,7 +289,6 @@ nav a.active {
     font-size: 11px;
     font-weight: bold;
     border: 1px solid #8da0b8;
-    transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .help-card {
@@ -325,13 +296,11 @@ nav a.active {
     background: #fffcf0;
 }
 
-/* ПОДВАЛ */
 footer {
     background: linear-gradient(to bottom, #d0dce8, #b8c8d8);
     padding: 18px 20px;
     text-align: center;
     border-top: 1px solid #7a9ec4;
-    transition: background 0.3s, border-color 0.3s;
 }
 
 footer p {
@@ -339,7 +308,6 @@ footer p {
     font-size: 11px;
     max-width: 600px;
     margin: 0 auto;
-    transition: color 0.3s;
 }
 
 .socials {
@@ -351,7 +319,6 @@ footer p {
     color: #0d2f5e;
     font-size: 12px;
     font-weight: bold;
-    transition: color 0.3s;
 }
 
 .socials a:hover {
@@ -359,13 +326,30 @@ footer p {
     text-decoration: underline;
 }
 
-/* ГОСТЕВАЯ КНИГА */
+.guide-page ol {
+    padding-left: 22px;
+    margin: 16px 0;
+}
+
+.guide-page li {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.guide-page code {
+    background: #c8d4e0;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #0d2f5e;
+    font-weight: bold;
+}
+
 .review-form {
     background: #f5f8fc;
     padding: 20px 22px;
     border: 1px solid #b3c3d4;
     margin-bottom: 25px;
-    transition: background 0.3s, border-color 0.3s;
 }
 
 .review-form h2 {
@@ -373,7 +357,6 @@ footer p {
     color: #0d2f5e;
     margin-bottom: 10px;
     font-family: Tahoma, sans-serif;
-    transition: color 0.3s;
 }
 
 .review-form input,
@@ -386,7 +369,6 @@ footer p {
     font-family: Tahoma, sans-serif;
     font-size: 13px;
     background: #ffffff;
-    transition: background 0.3s, border-color 0.3s, color 0.3s;
 }
 
 .review-form input:focus,
@@ -416,7 +398,6 @@ footer p {
     padding: 14px 18px;
     margin-bottom: 12px;
     border: 1px solid #b3c3d4;
-    transition: background 0.3s, border-color 0.3s;
 }
 
 .review-header {
@@ -429,23 +410,19 @@ footer p {
 .review-header strong {
     color: #0d2f5e;
     font-size: 14px;
-    transition: color 0.3s;
 }
 
 .review-date {
     font-size: 11px;
     color: #777;
-    transition: color 0.3s;
 }
 
 .review-item p {
     color: #333;
     font-size: 13px;
     margin: 0;
-    transition: color 0.3s;
 }
 
-/* КОМАНДА */
 .team-grid {
     display: flex;
     flex-wrap: wrap;
@@ -459,7 +436,6 @@ footer p {
     padding: 20px 16px;
     border: 1px solid #b3c3d4;
     text-align: center;
-    transition: background 0.3s, border-color 0.3s;
 }
 
 .team-avatar {
@@ -473,48 +449,40 @@ footer p {
     font-size: 16px;
     margin-bottom: 4px;
     font-family: Tahoma, sans-serif;
-    transition: color 0.3s;
 }
 
 .team-card p {
     font-size: 12px;
     color: #444;
-    transition: color 0.3s;
 }
 
-/* НОВОСТИ */
 .news-item {
     background: #f5f8fc;
     padding: 16px 20px;
     border: 1px solid #b3c3d4;
     margin-bottom: 14px;
-    transition: background 0.3s, border-color 0.3s;
 }
 
 .news-item h2 {
     font-size: 16px;
     color: #0d2f5e;
     margin-bottom: 4px;
-    transition: color 0.3s;
 }
 
 .news-item p {
     color: #333;
     margin-bottom: 4px;
-    transition: color 0.3s;
 }
 
 .news-item .badge {
     background: #c8d4e0;
 }
 
-/* ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ */
 .privacy-block {
     background: #f5f8fc;
     padding: 18px 22px;
     border: 1px solid #b3c3d4;
     margin-bottom: 16px;
-    transition: background 0.3s, border-color 0.3s;
 }
 
 .privacy-block h2 {
@@ -522,14 +490,12 @@ footer p {
     color: #0d2f5e;
     margin-bottom: 6px;
     font-family: Tahoma, sans-serif;
-    transition: color 0.3s;
 }
 
 .privacy-block p,
 .privacy-block li {
     color: #333;
     font-size: 13px;
-    transition: color 0.3s;
 }
 
 .privacy-block ul {
@@ -541,38 +507,12 @@ footer p {
     margin-bottom: 6px;
 }
 
-/* СТРАНИЦА ИНСТРУКЦИИ */
-.guide-page ol {
-    padding-left: 22px;
-    margin: 16px 0;
-}
-
-.guide-page li {
-    margin-bottom: 10px;
-    color: #333;
-    transition: color 0.3s;
-}
-
-.guide-page code {
-    background: #c8d4e0;
-    padding: 2px 8px;
-    border-radius: 3px;
-    font-size: 13px;
-    color: #0d2f5e;
-    font-weight: bold;
-    transition: background 0.3s, color 0.3s;
-}
-
-/* АДАПТАЦИЯ */
 @media (max-width: 640px) {
     .hero h1 {
         font-size: 32px;
     }
     .hero .subtitle {
         font-size: 16px;
-    }
-    .hero-icon {
-        font-size: 32px;
     }
     .header-flex {
         flex-direction: column;
@@ -616,288 +556,4 @@ footer p {
         padding: 1px 8px;
         margin-left: 5px;
     }
-}
-
-/* ============================================ */
-/* ТЁМНАЯ ТЕМА                                  */
-/* ============================================ */
-
-body.dark-theme {
-    background: #0d1117;
-    color: #c9d1d9;
-}
-
-body.dark-theme .container {
-    background: transparent;
-}
-
-body.dark-theme header {
-    background: linear-gradient(to bottom, #0d2f5e, #161b22);
-    border-bottom: 2px solid #ffcc00;
-}
-
-body.dark-theme .logo {
-    color: #ffffff;
-}
-
-body.dark-theme nav a {
-    color: #8b949e;
-}
-
-body.dark-theme nav a:hover {
-    color: #ffcc00;
-}
-
-body.dark-theme nav a.active {
-    color: #ffcc00;
-}
-
-body.dark-theme .lang-toggle,
-body.dark-theme .theme-toggle {
-    color: #fff;
-}
-
-body.dark-theme .hero {
-    background: linear-gradient(to bottom, #161b22, #0d1117);
-    border-bottom: 1px solid #30363d;
-}
-
-body.dark-theme .hero h1 {
-    color: #58a6ff;
-    text-shadow: 1px 1px 0 #30363d;
-}
-
-body.dark-theme .hero .subtitle {
-    color: #8b949e;
-}
-
-body.dark-theme .hero p {
-    color: #8b949e;
-}
-
-body.dark-theme .about,
-body.dark-theme .download-section {
-    background: #0d1117;
-    border-top: 1px solid #30363d;
-}
-
-body.dark-theme .about h2,
-body.dark-theme .download-section h2 {
-    color: #58a6ff;
-}
-
-body.dark-theme .about p {
-    color: #8b949e;
-}
-
-body.dark-theme .feature-item {
-    background: #161b22;
-    border: 1px solid #30363d;
-}
-
-body.dark-theme .feature-item h3 {
-    color: #58a6ff;
-}
-
-body.dark-theme .feature-item p {
-    color: #8b949e;
-}
-
-body.dark-theme .platform-card {
-    background: #161b22;
-    border: 1px solid #30363d;
-}
-
-body.dark-theme .platform-card h2 {
-    color: #58a6ff;
-}
-
-body.dark-theme .platform-card p {
-    color: #8b949e;
-}
-
-body.dark-theme .help-card {
-    border-color: #ffcc00;
-    background: #1c1f26;
-}
-
-body.dark-theme footer {
-    background: linear-gradient(to bottom, #161b22, #0d1117);
-    border-top: 1px solid #30363d;
-}
-
-body.dark-theme footer p {
-    color: #8b949e;
-}
-
-body.dark-theme .socials a {
-    color: #8b949e;
-}
-
-body.dark-theme .socials a:hover {
-    color: #ffcc00;
-}
-
-body.dark-theme .news-item {
-    background: #161b22;
-    border: 1px solid #30363d;
-}
-
-body.dark-theme .news-item h2 {
-    color: #58a6ff;
-}
-
-body.dark-theme .news-item p {
-    color: #8b949e;
-}
-
-body.dark-theme .news-item .badge {
-    background: #30363d;
-    color: #8b949e;
-}
-
-body.dark-theme .review-form {
-    background: #161b22;
-    border: 1px solid #30363d;
-}
-
-body.dark-theme .review-form h2 {
-    color: #58a6ff;
-}
-
-body.dark-theme .review-form input,
-body.dark-theme .review-form textarea {
-    background: #0d1117;
-    border: 1px solid #30363d;
-    color: #c9d1d9;
-}
-
-body.dark-theme .review-item {
-    background: #161b22;
-    border: 1px solid #30363d;
-}
-
-body.dark-theme .review-header strong {
-    color: #58a6ff;
-}
-
-body.dark-theme .review-item p {
-    color: #8b949e;
-}
-
-body.dark-theme .review-date {
-    color: #8b949e;
-}
-
-body.dark-theme .team-card {
-    background: #161b22;
-    border: 1px solid #30363d;
-}
-
-body.dark-theme .team-card h3 {
-    color: #58a6ff;
-}
-
-body.dark-theme .team-card p {
-    color: #8b949e;
-}
-
-body.dark-theme .download-page,
-body.dark-theme .about-page,
-body.dark-theme .guide-page,
-body.dark-theme .news-page,
-body.dark-theme .team-page,
-body.dark-theme .reviews-page,
-body.dark-theme .privacy-page {
-    background: #0d1117;
-}
-
-body.dark-theme .download-page h1,
-body.dark-theme .about-page h1,
-body.dark-theme .guide-page h1,
-body.dark-theme .news-page h1,
-body.dark-theme .team-page h1,
-body.dark-theme .reviews-page h1,
-body.dark-theme .privacy-page h1 {
-    color: #58a6ff;
-    border-bottom: 2px solid #30363d;
-}
-
-body.dark-theme .download-page .subtitle,
-body.dark-theme .team-page .subtitle,
-body.dark-theme .reviews-page .subtitle,
-body.dark-theme .privacy-page .subtitle {
-    color: #8b949e;
-}
-
-body.dark-theme .guide-page li {
-    color: #8b949e;
-}
-
-body.dark-theme .guide-page code {
-    background: #30363d;
-    color: #58a6ff;
-}
-
-body.dark-theme .privacy-block {
-    background: #161b22;
-    border: 1px solid #30363d;
-}
-
-body.dark-theme .privacy-block h2 {
-    color: #58a6ff;
-}
-
-body.dark-theme .privacy-block p,
-body.dark-theme .privacy-block li {
-    color: #8b949e;
-}
-
-body.dark-theme .privacy-block a {
-    color: #58a6ff;
-}
-
-body.dark-theme .btn {
-    background: linear-gradient(to bottom, #1f6feb, #1a5fcc);
-    color: #ffffff;
-    border: 1px solid #1f6feb;
-}
-
-body.dark-theme .btn:hover {
-    background: linear-gradient(to bottom, #388bfd, #1f6feb);
-    border-color: #388bfd;
-}
-
-body.dark-theme .btn-secondary {
-    background: transparent;
-    color: #58a6ff;
-    border: 2px solid #58a6ff;
-}
-
-body.dark-theme .btn-secondary:hover {
-    background: #58a6ff;
-    color: #0d1117;
-}
-
-body.dark-theme .badge {
-    background: #30363d;
-    color: #8b949e;
-    border: 1px solid #30363d;
-}
-
-body.dark-theme #maintenance-mode {
-    background: #0d1117 !important;
-}
-
-body.dark-theme #maintenance-mode > div {
-    background: #161b22 !important;
-    border: 1px solid #30363d !important;
-}
-
-body.dark-theme #maintenance-mode h1 {
-    color: #58a6ff !important;
-}
-
-body.dark-theme #maintenance-mode p {
-    color: #8b949e !important;
 }
