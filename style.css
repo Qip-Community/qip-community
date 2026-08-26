@@ -589,16 +589,6 @@ footer p {
     transform: scale(1.1);
 }
 
-body.dark-theme #back-to-top {
-    background: #1f6feb;
-    border-color: #58a6ff;
-}
-
-body.dark-theme #back-to-top:hover {
-    background: #58a6ff;
-    color: #0d1117;
-}
-
 /* АДАПТАЦИЯ */
 @media (max-width: 640px) {
     .hero h1 {
@@ -686,6 +676,11 @@ body.dark-theme nav a:hover {
 
 body.dark-theme nav a.active {
     color: #ffcc00;
+}
+
+body.dark-theme .lang-toggle,
+body.dark-theme .theme-toggle {
+    color: #fff;
 }
 
 body.dark-theme .hero {
@@ -931,4 +926,14 @@ body.dark-theme #maintenance-mode h1 {
 
 body.dark-theme #maintenance-mode p {
     color: #8b949e !important;
+}
+
+body.dark-theme #back-to-top {
+    background: #1f6feb;
+    border-color: #58a6ff;
+}
+
+body.dark-theme #back-to-top:hover {
+    background: #58a6ff;
+    color: #0d1117;
 }
