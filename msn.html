@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GoToTalk Community</title>
+    <title>MSN Community</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
@@ -21,9 +21,9 @@
     <div id="main-site">
         <header>
             <div class="container header-flex">
-                <div class="logo">📡 GoToTalk <span>Community</span></div>
+                <div class="logo">🦋 MSN <span>Community</span></div>
                 <nav>
-                    <a href="index.html" class="active" data-i18n="nav-home">Главная</a>
+                    <a href="index.html" data-i18n="nav-home">Главная</a>
                     <a href="download.html" data-i18n="nav-download">Скачать</a>
                     <a href="about.html" data-i18n="nav-about">О нас</a>
                     <a href="team.html" data-i18n="nav-team">Команда</a>
@@ -41,38 +41,40 @@
             </div>
         </header>
 
-        <section class="launcher">
+        <section class="guide-page">
             <div class="container">
-                <h1 data-i18n="launcher-title">Куда вы хотели зайти?</h1>
-                <p class="subtitle" data-i18n="launcher-subtitle">Выберите мессенджер</p>
+                <h1 data-i18n="msn-title">🦋 MSN Messenger 6.2</h1>
+                <p class="subtitle" data-i18n="msn-subtitle">Инструкция по установке и настройке</p>
 
-                <div class="launcher-grid">
-
-                    <a href="qip.html" class="launcher-card">
-                        <div class="launcher-icon">💬</div>
-                        <h2>QIP</h2>
-                        <p data-i18n="launcher-qip">Легендарный QIP 2005</p>
-                    </a>
-
-                    <a href="msn.html" class="launcher-card">
-                        <div class="launcher-icon">🦋</div>
-                        <h2>MSN</h2>
-                        <p data-i18n="launcher-msn">Windows Live Messenger</p>
-                    </a>
-
-                    <a href="aol.html" class="launcher-card">
-                        <div class="launcher-icon">👤</div>
-                        <h2>AOL</h2>
-                        <p data-i18n="launcher-aol">AOL Instant Messenger</p>
-                    </a>
-
-                    <a href="mailagent.html" class="launcher-card">
-                        <div class="launcher-icon">📧</div>
-                        <h2>Mail Agent</h2>
-                        <p data-i18n="launcher-mailagent">Mail.Ru Агент</p>
-                    </a>
-
+                <div class="platform-card">
+                    <h2 data-i18n="msn-step1-title">📝 Шаг 1: Регистрация</h2>
+                    <p data-i18n="msn-step1-desc">Зарегистрируйтесь на сайте Escargot с типом аккаунта <strong>«Screenname»</strong> (не UIN!).</p>
+                    <a href="https://account.escargot.chat/register/" target="_blank" class="btn">Перейти на Escargot →</a>
                 </div>
+
+                <div class="platform-card">
+                    <h2 data-i18n="msn-step2-title">📥 Шаг 2: Скачивание MSN</h2>
+                    <p data-i18n="msn-step2-desc">Скачайте MSN 6.2 на русском языке по ссылке ниже.</p>
+                    <a href="https://drive.google.com/drive/folders/1tkOsJdTkLJQLEhnm-ATEOfky2h92SCMx?usp=sharing" target="_blank" class="btn">Скачать MSN 6.2 →</a>
+                </div>
+
+                <div class="platform-card">
+                    <h2 data-i18n="msn-step3-title">🔧 Шаг 3: Установка</h2>
+                    <p data-i18n="msn-step3-desc">Установите MSN из архива. После установки откройте файл <code>RUN_AFTER_INSTALL</code> и нажмите <strong>Patch All</code>.</p>
+                </div>
+
+                <div class="platform-card">
+                    <h2 data-i18n="msn-step4-title">🔑 Шаг 4: Вход</h2>
+                    <p data-i18n="msn-step4-desc">Введите свои данные (Screenname и пароль), которые вы указали при регистрации на Escargot.</p>
+                </div>
+
+                <div class="platform-card help-card">
+                    <h2 data-i18n="msn-help-title">❓ Нужна помощь?</h2>
+                    <p data-i18n="msn-help-desc">Если что-то пошло не так — пиши в наш Discord, поможем!</p>
+                    <a href="https://discord.gg/VSJpGajNmP" target="_blank" class="btn">Перейти в Discord →</a>
+                </div>
+
+                <a href="index.html" class="btn btn-secondary" data-i18n="msn-back">← Назад к выбору</a>
             </div>
         </section>
 
@@ -103,22 +105,36 @@
             const translations = {
                 ru: {
                     'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-faq': 'FAQ', 'nav-blog': 'Блог', 'nav-links': 'Ссылки', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord',
-                    'launcher-title': 'Куда вы хотели зайти?',
-                    'launcher-subtitle': 'Выберите мессенджер',
-                    'launcher-qip': 'Легендарный QIP 2005',
-                    'launcher-msn': 'Windows Live Messenger',
-                    'launcher-aol': 'AOL Instant Messenger',
-                    'launcher-mailagent': 'Mail.Ru Агент',
+                    'msn-title': '🦋 MSN Messenger 6.2',
+                    'msn-subtitle': 'Инструкция по установке и настройке',
+                    'msn-step1-title': '📝 Шаг 1: Регистрация',
+                    'msn-step1-desc': 'Зарегистрируйтесь на сайте Escargot с типом аккаунта «Screenname» (не UIN!).',
+                    'msn-step2-title': '📥 Шаг 2: Скачивание MSN',
+                    'msn-step2-desc': 'Скачайте MSN 6.2 на русском языке по ссылке ниже.',
+                    'msn-step3-title': '🔧 Шаг 3: Установка',
+                    'msn-step3-desc': 'Установите MSN из архива. После установки откройте файл RUN_AFTER_INSTALL и нажмите Patch All.',
+                    'msn-step4-title': '🔑 Шаг 4: Вход',
+                    'msn-step4-desc': 'Введите свои данные (Screenname и пароль), которые вы указали при регистрации на Escargot.',
+                    'msn-help-title': '❓ Нужна помощь?',
+                    'msn-help-desc': 'Если что-то пошло не так — пиши в наш Discord, поможем!',
+                    'msn-back': '← Назад к выбору',
                     'footer-text': 'GoToTalk Community © 2026 — неофициальный фанатский проект.'
                 },
                 en: {
                     'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-faq': 'FAQ', 'nav-blog': 'Blog', 'nav-links': 'Links', 'nav-privacy': 'Privacy', 'nav-discord': 'Discord',
-                    'launcher-title': 'Where do you want to go?',
-                    'launcher-subtitle': 'Choose a messenger',
-                    'launcher-qip': 'Legendary QIP 2005',
-                    'launcher-msn': 'Windows Live Messenger',
-                    'launcher-aol': 'AOL Instant Messenger',
-                    'launcher-mailagent': 'Mail.Ru Agent',
+                    'msn-title': '🦋 MSN Messenger 6.2',
+                    'msn-subtitle': 'Installation and setup guide',
+                    'msn-step1-title': '📝 Step 1: Registration',
+                    'msn-step1-desc': 'Register on Escargot with account type "Screenname" (not UIN!).',
+                    'msn-step2-title': '📥 Step 2: Download MSN',
+                    'msn-step2-desc': 'Download MSN 6.2 in Russian from the link below.',
+                    'msn-step3-title': '🔧 Step 3: Installation',
+                    'msn-step3-desc': 'Install MSN from the archive. After installation, open RUN_AFTER_INSTALL and click Patch All.',
+                    'msn-step4-title': '🔑 Step 4: Login',
+                    'msn-step4-desc': 'Enter your credentials (Screenname and password) from Escargot.',
+                    'msn-help-title': '❓ Need help?',
+                    'msn-help-desc': 'If something went wrong — write in our Discord, we\'ll help!',
+                    'msn-back': '← Back to selection',
                     'footer-text': 'GoToTalk Community © 2026 — unofficial fan project.'
                 }
             };

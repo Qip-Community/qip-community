@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GoToTalk Community</title>
+    <title>AOL Community</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
@@ -21,9 +21,9 @@
     <div id="main-site">
         <header>
             <div class="container header-flex">
-                <div class="logo">📡 GoToTalk <span>Community</span></div>
+                <div class="logo">👤 AOL <span>Community</span></div>
                 <nav>
-                    <a href="index.html" class="active" data-i18n="nav-home">Главная</a>
+                    <a href="index.html" data-i18n="nav-home">Главная</a>
                     <a href="download.html" data-i18n="nav-download">Скачать</a>
                     <a href="about.html" data-i18n="nav-about">О нас</a>
                     <a href="team.html" data-i18n="nav-team">Команда</a>
@@ -41,38 +41,34 @@
             </div>
         </header>
 
-        <section class="launcher">
+        <section class="guide-page">
             <div class="container">
-                <h1 data-i18n="launcher-title">Куда вы хотели зайти?</h1>
-                <p class="subtitle" data-i18n="launcher-subtitle">Выберите мессенджер</p>
+                <h1 data-i18n="aol-title">👤 AIM 5.0 (1995)</h1>
+                <p class="subtitle" data-i18n="aol-subtitle">Инструкция по установке и настройке</p>
 
-                <div class="launcher-grid">
-
-                    <a href="qip.html" class="launcher-card">
-                        <div class="launcher-icon">💬</div>
-                        <h2>QIP</h2>
-                        <p data-i18n="launcher-qip">Легендарный QIP 2005</p>
-                    </a>
-
-                    <a href="msn.html" class="launcher-card">
-                        <div class="launcher-icon">🦋</div>
-                        <h2>MSN</h2>
-                        <p data-i18n="launcher-msn">Windows Live Messenger</p>
-                    </a>
-
-                    <a href="aol.html" class="launcher-card">
-                        <div class="launcher-icon">👤</div>
-                        <h2>AOL</h2>
-                        <p data-i18n="launcher-aol">AOL Instant Messenger</p>
-                    </a>
-
-                    <a href="mailagent.html" class="launcher-card">
-                        <div class="launcher-icon">📧</div>
-                        <h2>Mail Agent</h2>
-                        <p data-i18n="launcher-mailagent">Mail.Ru Агент</p>
-                    </a>
-
+                <div class="platform-card">
+                    <h2 data-i18n="aol-step1-title">📥 Шаг 1: Скачивание</h2>
+                    <p data-i18n="aol-step1-desc">Скачайте AIM 5.0 по ссылке ниже.</p>
+                    <a href="https://drive.google.com/drive/folders/1AXc_5qvxuYDDL30B4oAj-hLRSeuzs5CU?usp=sharing" target="_blank" class="btn">Скачать AIM 5.0 →</a>
                 </div>
+
+                <div class="platform-card">
+                    <h2 data-i18n="aol-step2-title">🔧 Шаг 2: Установка</h2>
+                    <p data-i18n="aol-step2-desc">Установите AIM из архива, следуя инструкциям установщика.</p>
+                </div>
+
+                <div class="platform-card">
+                    <h2 data-i18n="aol-step3-title">🔑 Шаг 3: Вход</h2>
+                    <p data-i18n="aol-step3-desc">Введите свой Screenname и пароль. Пароль по умолчанию: <code>mokerTS</code></p>
+                </div>
+
+                <div class="platform-card help-card">
+                    <h2 data-i18n="aol-help-title">❓ Нужна помощь?</h2>
+                    <p data-i18n="aol-help-desc">Если что-то пошло не так — пиши в наш Discord, поможем!</p>
+                    <a href="https://discord.gg/VSJpGajNmP" target="_blank" class="btn">Перейти в Discord →</a>
+                </div>
+
+                <a href="index.html" class="btn btn-secondary" data-i18n="aol-back">← Назад к выбору</a>
             </div>
         </section>
 
@@ -103,22 +99,32 @@
             const translations = {
                 ru: {
                     'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-faq': 'FAQ', 'nav-blog': 'Блог', 'nav-links': 'Ссылки', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord',
-                    'launcher-title': 'Куда вы хотели зайти?',
-                    'launcher-subtitle': 'Выберите мессенджер',
-                    'launcher-qip': 'Легендарный QIP 2005',
-                    'launcher-msn': 'Windows Live Messenger',
-                    'launcher-aol': 'AOL Instant Messenger',
-                    'launcher-mailagent': 'Mail.Ru Агент',
+                    'aol-title': '👤 AIM 5.0 (1995)',
+                    'aol-subtitle': 'Инструкция по установке и настройке',
+                    'aol-step1-title': '📥 Шаг 1: Скачивание',
+                    'aol-step1-desc': 'Скачайте AIM 5.0 по ссылке ниже.',
+                    'aol-step2-title': '🔧 Шаг 2: Установка',
+                    'aol-step2-desc': 'Установите AIM из архива, следуя инструкциям установщика.',
+                    'aol-step3-title': '🔑 Шаг 3: Вход',
+                    'aol-step3-desc': 'Введите свой Screenname и пароль. Пароль по умолчанию: mokerTS',
+                    'aol-help-title': '❓ Нужна помощь?',
+                    'aol-help-desc': 'Если что-то пошло не так — пиши в наш Discord, поможем!',
+                    'aol-back': '← Назад к выбору',
                     'footer-text': 'GoToTalk Community © 2026 — неофициальный фанатский проект.'
                 },
                 en: {
                     'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-faq': 'FAQ', 'nav-blog': 'Blog', 'nav-links': 'Links', 'nav-privacy': 'Privacy', 'nav-discord': 'Discord',
-                    'launcher-title': 'Where do you want to go?',
-                    'launcher-subtitle': 'Choose a messenger',
-                    'launcher-qip': 'Legendary QIP 2005',
-                    'launcher-msn': 'Windows Live Messenger',
-                    'launcher-aol': 'AOL Instant Messenger',
-                    'launcher-mailagent': 'Mail.Ru Agent',
+                    'aol-title': '👤 AIM 5.0 (1995)',
+                    'aol-subtitle': 'Installation and setup guide',
+                    'aol-step1-title': '📥 Step 1: Download',
+                    'aol-step1-desc': 'Download AIM 5.0 from the link below.',
+                    'aol-step2-title': '🔧 Step 2: Installation',
+                    'aol-step2-desc': 'Install AIM from the archive following the installer instructions.',
+                    'aol-step3-title': '🔑 Step 3: Login',
+                    'aol-step3-desc': 'Enter your Screenname and password. Default password: mokerTS',
+                    'aol-help-title': '❓ Need help?',
+                    'aol-help-desc': 'If something went wrong — write in our Discord, we\'ll help!',
+                    'aol-back': '← Back to selection',
                     'footer-text': 'GoToTalk Community © 2026 — unofficial fan project.'
                 }
             };
